@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300&family=Raleway:ital,wght@0,100..900;1,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
+.full-height {
+    height: 80vh;
+}
+
+.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px; 
+    background-color: #ffffff; 
+    height: 80vh;
+}
+
+.banner img {
+    max-width: 80%; 
+    max-height: 80%; 
+    object-fit: contain; 
+}
+
+.banner-heading {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.input-boxes {
+    width: 100%;
+    font-size: 1.2rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.button-style {
+    background-color: #0039f6;
+    color: white;
+    width: 40%;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+label {
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
+/** Footer Styling */
+
+footer {
+    padding: 2rem 10rem 2rem 10rem;
+}

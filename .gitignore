@@ -1,0 +1,45 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Dependency directories
+node_modules/
+jspm_packages/
+
+# Distribution
+dist/
+build/
+
+# Caches
+.npm
+.pnpm
+.yarn
+.cache
+.parcel-cache
+.eslintcache
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Editor & IDE
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+
+# TypeScript
+*.tsbuildinfo
+
+# Coverage
+coverage/
+
+# Optional files
+.DS_Store

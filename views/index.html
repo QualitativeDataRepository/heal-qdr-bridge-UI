@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heal - QDR Bridge</title>
+
+    <!-- css stylesheets linked here -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <link type="text/css" href="styles/index.css" rel="stylesheet">
+
+</head>
+<body>
+
+    <!-- Form container -->
+    <div class="container-fluid">
+        <div class="row full-height">
+            <div class="col-6 d-flex align-items-center justify-content-center">
+                <form class="w-75">
+                    <h1 class="banner-heading mb-4">Heal - QDR Bridge</h1>
+                    
+                    <div class="mb-3">
+                        <label for="source" class="form-label">Select Source</label>
+                        <select class="form-select input-boxes" id="source" onchange="toggleInputs()">
+                            <option value="">Select</option>
+                            <option value="heal">HEAL</option>
+                        </select>
+                    </div>
+                
+                    <div class="mb-3" id="dataTypeDiv" style="display: none;">
+                        <label for="dataType" class="form-label">Select Data Type</label>
+                        <select class="form-select input-boxes" id="dataType" onchange="toggleDataInput()">
+                            <option value="">Select</option>
+                            <option value="projectId">Project ID</option>
+                            <option value="jsonFile">JSON File</option>
+                        </select>
+                    </div>
+                
+                    <div class="mb-3" id="healIdInput" style="display: none;">
+                        <label for="healId" class="form-label">Enter HEAL Project ID</label>
+                        <input type="text" class="form-control input-boxes" id="healId" placeholder="Enter HEAL Project ID">
+                    </div>
+                
+                    <div class="mb-3" id="jsonFileInput" style="display: none;">
+                        <label for="jsonFile" class="form-label">Upload JSON File</label>
+                        <input type="file" class="form-control input-boxes" id="jsonFile" accept=".json">
+                    </div>
+                
+                    <div class="mb-3">
+                        <label for="destination" class="form-label">Select Destination</label>
+                        <select class="form-select input-boxes" id="destination" onchange="toggleInputs()">
+                            <option value="">Select</option>
+                            <option value="dataverse-qdr">Dataverse - QDR</option>
+                        </select>
+                    </div>
+                
+                    <div class="mb-3" id="apiKeyInput" style="display: none;">
+                        <label for="apiKey" class="form-label">Enter API Key</label>
+                        <input type="text" class="form-control input-boxes" id="apiKey" placeholder="Enter API Key">
+                    </div>
+                
+                    <button type="submit" class="mt-2 button-style btn btn-primary btn-large">Submit</button>
+                </form>
+            </div>
+            <div class="col-6 banner">
+                <img src="assets/banner-image.png" alt="Banner Image">
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer container -->
+    <footer class="container-fluid bg-light">
+        <div class="row">
+            <div class="col-3"></div>
+            <div class="col-3">
+                <h5 class="mb-2">Resources</h5>
+                <a href="https://healdata.org/portal/discovery" target="_blank" class = "d-block text-dark">HEAL Discovery Portal</a>
+                <a href="https://data.stage.qdr.org/dataverse/main" target="_blank" class="d-block text-dark">Generate Dataverse API Key</a>
+            </div>
+            <div class="col-3"></div>
+            <div class="col-3"></div>
+        </div>
+    </footer>
+
+
+    <!-- js scripts begin here -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <script src="js/buttons.js"></script>
+    <script src="js/form.js"></script>
+
+    <!-- js scripts ends here -->
+
+</body>
+</html>
