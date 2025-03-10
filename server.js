@@ -6,6 +6,8 @@ const uploadToDataverse = require('./src/uploadToDataverse')
 const getDataFromHeal = require('./src/getDataFromHeal')
 
 const app = express();
+const upload = multer({ storage: multer.memoryStorage() });
+
 app.use(express.static(path.join(__dirname, 'public'))); 
 app.use(express.json()); 
 app.use(express.urlencoded({ extended: true }));
@@ -36,12 +38,21 @@ app.get('/healdata/:id', async (req, res) => {
   }
 });
 
-app.post('/push/qdr', async (req, res) => {
-    try {
-        const id = req.body.healId;
-        const healResponse = await getDataFromHeal(id)
-        const dataverseJSON = healToDataverse(healResponse.data);
+app.post('/push/qdr', upload.single("sourceContent"), async (req, res) => {
 
+    var healDataPayload;
+
+    if(req.body.sourceDataType === "projectId"){
+      const healResponse = await getDataFromHeal(req.body.sourceContent);
+      healDataPayload = healResponse
+    }else{
+      healDataPayload = JSON.parse(req.file.buffer.toString("utf-8"));
+    }
+
+    console.log(healDataPayload)
+
+    try {
+        const dataverseJSON = healToDataverse(healDataPayload);
         console.log(JSON.stringify(dataverseJSON, null, 2))
         await uploadToDataverse(dataverseJSON, req.body.apiKey)
 
@@ -57,9 +68,6 @@ app.post('/push/qdr', async (req, res) => {
         });
       }
   });
-
-
-
 
 app.listen(8080, () => {
     console.log('Server is running on port 8080')

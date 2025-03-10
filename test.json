@@ -1,0 +1,659 @@
+{
+    "_guid_type": "discovery_metadata",
+    "nih_reporter": {
+      "foa": "DA19-025",
+      "terms": "\u003CAccidents\u003E\u003CAttitude\u003E\u003CBuprenorphine\u003E\u003CChicago\u003E\u003CColor\u003E\u003CCommunities\u003E\u003CControl Groups\u003E\u003CDischarge Plannings\u003E\u003CDisorder\u003E\u003CDisease\u003E\u003Cdrug/agent\u003E\u003CPharmaceutic Preparations\u003E\u003CMedication\u003E\u003CDrugs\u003E\u003CPharmaceutical Preparations\u003E\u003Cfacial\u003E\u003Cfaces\u003E\u003CFace\u003E\u003CPhentanyl\u003E\u003CFentyl\u003E\u003CFentanest\u003E\u003CDuragesic\u003E\u003CActiq\u003E\u003CFentanyl\u003E\u003CFuture\u003E\u003CGeography\u003E\u003CHealth\u003E\u003CHeterogeneity\u003E\u003CHybrids\u003E\u003CIllinois\u003E\u003CIncidence\u003E\u003CInsurance\u003E\u003CJustice\u003E\u003Cmen's\u003E\u003Cmen\u003E\u003CMental Hygiene Services\u003E\u003CMental Health Services\u003E\u003CMethadose\u003E\u003CDolophine\u003E\u003CAlthose\u003E\u003CAdanon\u003E\u003CMethadone\u003E\u003CMethods\u003E\u003CNaloxone\u003E\u003CPersons\u003E\u003CNarcotics\u003E\u003COverdose\u003E\u003CPatients\u003E\u003CPhysicians\u003E\u003CPrisons\u003E\u003CPublic Health\u003E\u003Cstudy design\u003E\u003CStudy Type\u003E\u003CResearch Design\u003E\u003CResearchers\u003E\u003CInvestigators\u003E\u003CResearch Personnel\u003E\u003CResearch Resources\u003E\u003CResources\u003E\u003CRisk\u003E\u003CSocial Service\u003E\u003CSocial Work\u003E\u003CStigmatization\u003E\u003CSyringes\u003E\u003CTesting\u003E\u003CTravel\u003E\u003CUniversities\u003E\u003CUrban Population\u003E\u003CWoman\u003E\u003CWork\u003E\u003CCase Management\u003E\u003CCriminal Justice\u003E\u003CCaring\u003E\u003Cbase\u003E\u003Crural area\u003E\u003Crural region\u003E\u003Cimproved\u003E\u003CLeft\u003E\u003CSite\u003E\u003CAcute\u003E\u003CImprisonment\u003E\u003Cincarceration\u003E\u003Cincarcerated\u003E\u003CEnsure\u003E\u003CAlcohol or Other Drugs use\u003E\u003Cusing substances\u003E\u003Csubstance using\u003E\u003Csubstance use\u003E\u003CAOD use\u003E\u003CIndividual\u003E\u003CRecovery\u003E\u003CRural\u003E\u003COpioid\u003E\u003COpiates\u003E\u003CFunding\u003E\u003CCommunity Outreach\u003E\u003CRandomized Controlled Trials\u003E\u003Crandomized controlled study\u003E\u003CTherapeutic\u003E\u003CSystem\u003E\u003CVisit\u003E\u003CServices\u003E\u003Cheroin overdose\u003E\u003Cdiamorphine overdose\u003E\u003Cexperience\u003E\u003CParticipant\u003E\u003Cpeer\u003E\u003Ccultural competence\u003E\u003CHarm Reduction\u003E\u003CHarm Minimization\u003E\u003Cmember\u003E\u003CSocial status\u003E\u003Csocial standing\u003E\u003Csocial position\u003E\u003CPositioning Attribute\u003E\u003CPosition\u003E\u003CModeling\u003E\u003CIntervention\u003E\u003Cinterventional strategy\u003E\u003CIntervention Strategies\u003E\u003CProvider\u003E\u003CEffectiveness\u003E\u003CAddress\u003E\u003CHealth system\u003E\u003CJail\u003E\u003CData\u003E\u003CEffectiveness of Interventions\u003E\u003CNational Institute of Drug Abuse\u003E\u003CNational Institute on Drug Abuse\u003E\u003CNIDA\u003E\u003CEnrollment\u003E\u003Cenroll\u003E\u003Cfollow-up\u003E\u003Cfollowup\u003E\u003Cfollowed up\u003E\u003Cfollow up\u003E\u003Cactive followup\u003E\u003CActive Follow-up\u003E\u003CEvidence based treatment\u003E\u003Ccare systems\u003E\u003Ccare services\u003E\u003Cdesign\u003E\u003Cdesigning\u003E\u003COutcome\u003E\u003CResistance\u003E\u003Cresistant\u003E\u003Chigh risk\u003E\u003Cprimary outcome\u003E\u003Csecondary outcome\u003E\u003Cpragmatic trial\u003E\u003Cwaiver\u003E\u003Crandomized trial\u003E\u003CRandomization trial\u003E\u003Ctreatment group\u003E\u003Ccommunity partnership\u003E\u003Copioid use disorder\u003E\u003Copiate use disorder\u003E\u003Cmedication-assisted treatment\u003E\u003Copioid use\u003E\u003Copioid intake\u003E\u003Copioid drug use\u003E\u003Copioid consumption\u003E\u003Copiate use\u003E\u003Copiate intake\u003E\u003Copiate drug use\u003E\u003Copiate consumption\u003E\u003Crelapse risk\u003E\u003Crural patients\u003E\u003Curban setting\u003E\u003Crural setting\u003E\u003Crural place\u003E\u003Crural locality\u003E\u003Copioid epidemic\u003E\u003Copioid crisis\u003E\u003Copiate crisis\u003E\u003Copioid overdose\u003E\u003Copioid toxicity\u003E\u003Copioid related overdose\u003E\u003Copioid poisoning\u003E\u003Copioid medication overdose\u003E\u003Copioid intoxication\u003E\u003Copioid induced overdose\u003E\u003Copioid drug overdose\u003E\u003Copiate related overdose\u003E\u003Copiate overdose\u003E\u003Copioid mortality\u003E\u003Copioid related death\u003E\u003Copioid overdose death\u003E\u003Copioid deaths\u003E\u003Copiate mortality\u003E\u003Copiate deaths\u003E\u003Cservice engagement\u003E\u003Ccare coordination\u003E\u003Ccoordinating care\u003E\u003COpioid user\u003E\u003COpioid drug user\u003E\u003COpiate user\u003E\u003Cbuprenorphine treatment\u003E\u003Ctreatment arm\u003E\u003Cintervention arm\u003E\u003CInfrastructure\u003E\u003Cgun homicide\u003E\u003Csynthetic opioid\u003E\u003Csynthetic opiate\u003E\u003Cmortality risk\u003E\u003Cdeath risk\u003E",
+      "is_new": false,
+      "appl_id": 9882847,
+      "all_text": null,
+      "can_task": [
+        "2019.100"
+      ],
+      "full_foa": "RFA-DA-19-025",
+      "org_city": "CHICAGO",
+      "org_name": "UNIVERSITY OF CHICAGO",
+      "phr_text": "PROJECT NARRATIVE. The proposed project, Reducing Opioid Mortality in Illinois (ROMI) would conduct a multi-site randomized trial. to serve individuals with opioid use disorders who exit Illinois jails and prisons. Members of the ROMI. treatment group will receive case management services that seek to engage and retain participants in. medication-assisted treatment (MAT). The proposed project seeks to demonstrate improved MAT participation. among justice-involved persons with opioid use disorders, and thus improved health and criminal justice. outcomes across diverse urban and rural settings in Illinois.",
+      "cfda_code": "279",
+      "cong_dist": "IL-01",
+      "dept_type": "NONE",
+      "is_active": false,
+      "org_state": "IL",
+      "award_type": "1",
+      "budget_end": "2020-04-30T12:04:00Z",
+      "date_added": "2019-07-20T07:07:57Z",
+      "pref_terms": "Accidents;Acute;Address;Alcohol or Other Drugs use;Attitude;Buprenorphine;Caring;Case Management;Chicago;Color;Communities;Community Outreach;Control Groups;Criminal Justice;Data;Discharge Plannings;Disease;Effectiveness;Effectiveness of Interventions;Enrollment;Ensure;Evidence based treatment;Face;Fentanyl;Funding;Future;Geography;Harm Reduction;Health;Health system;Heterogeneity;Hybrids;Illinois;Imprisonment;Incidence;Individual;Infrastructure;Insurance;Intervention;Jail;Justice;Left;Mental Health Services;Methadone;Methods;Modeling;Naloxone;Narcotics;National Institute of Drug Abuse;Opioid;Opioid user;Outcome;Overdose;Participant;Patients;Persons;Pharmaceutical Preparations;Physicians;Positioning Attribute;Prisons;Provider;Public Health;Randomized Controlled Trials;Recovery;Research Design;Research Personnel;Resistance;Resources;Risk;Rural;Services;Site;Social Work;Social status;Stigmatization;Syringes;System;Testing;Therapeutic;Travel;Universities;Urban Population;Visit;Woman;Work;base;buprenorphine treatment;care coordination;care systems;community partnership;cultural competence;design;experience;follow-up;gun homicide;heroin overdose;high risk;improved;medication-assisted treatment;member;men;mortality risk;opioid epidemic;opioid mortality;opioid overdose;opioid use;opioid use disorder;peer;pragmatic trial;primary outcome;randomized trial;relapse risk;rural area;rural patients;rural setting;secondary outcome;service engagement;synthetic opioid;treatment arm;treatment group;urban setting;waiver",
+      "agency_code": "NIH",
+      "arra_funded": "N",
+      "awd_doc_num": "UDA050066A",
+      "fiscal_year": 2019,
+      "org_country": "UNITED STATES",
+      "project_num": "1UG1DA050066-01",
+      "award_amount": 1897643,
+      "budget_start": "2019-07-15T12:07:00Z",
+      "is_territory": false,
+      "organization": {
+        "city": null,
+        "country": null,
+        "org_city": "CHICAGO",
+        "org_duns": [
+          "005421136"
+        ],
+        "org_fips": "US",
+        "org_name": "UNIVERSITY OF CHICAGO",
+        "org_ueis": [
+          "ZUE9HKT2CLC9"
+        ],
+        "dept_type": "NONE",
+        "org_state": "IL",
+        "org_country": "UNITED STATES",
+        "org_zipcode": "606372612",
+        "primary_uei": "ZUE9HKT2CLC9",
+        "org_ipf_code": "1413601",
+        "primary_duns": "005421136",
+        "org_state_name": null,
+        "external_org_id": 1413601,
+        "fips_country_code": null
+      },
+      "abstract_text": "PROJECT ABSTRACT. More than 2,700 Illinois residents died of opiate overdose in 2017a number that surpassed the states. combined fatalities from road accidents and gun homicide. Individuals leaving jail and prison may be at highest. risk of fatal overdose and other drug-related harms. Severely vulnerable men and women face these risks at. precisely the moment they cross boundaries of fragmented criminal justice, social service, and public health. systems, and are thus most vulnerable to lost follow-up and disengagement from services, or to have other. basic needs left unattended. The challenge may be most acute for detainees who rapidly flow through jail. settings, where unpredictable departures hinder discharge planning and care coordination, and where justice. stakeholders may hold attitudes that stigmatize substance use or resistant to harm reduction interventions.. Individuals returning to Chicago communities of color are near relatively rich resources for both treatment and. harm reduction. Yet they must navigate epicenters of illicit narcotics distribution that feature particularly high. incidence of fatal overdose from heroin, fentanyl, and other synthetic opioids. Rural individuals in Southern. Illinois, may have long travel distances from any methadone facility or any DEA-waivered physician available to. prescribe buprenorphine. Rural patients also face geographic barriers to the provision of naloxone and SSPs.. Many harm reduction services have been designed and implemented to serve urban populations in traditional. centers of opioid use. The acceptability and cultural competence of such rural services remains understudied.. Our proposed multi-site ROMI trial (Reducing Opioid Mortality in Illinois) seeks to address this public health. challenge through improved supports and service linkages to medication-assisted treatment (MAT), naloxone. distribution, and syringe support services (SSPs) provided to justice-involved individuals living with opioid use. disorders. We seek to test whether a unified case management approach that includes peer recovery coaches. can improve treatment engagement and retention in five diverse urban and rural contexts that all experience. high rates of opioid disorders, overdose, and related harms.. We request funds to implement a five-site Randomized Controlled Trial, enrolling at least 1,000 individuals. living with OUD. The ROMI trial will be carried out using a hub-and-spoke model, with centralized long-. standing social services infrastructure at the Community Outreach Intervention Projects (COIP) hosted at the. University of Illinois at Chicago (UIC). COIP provides case management/transition of care services to justice-. involved opioid users, extending resources and technical assistance to less-populated rural areas hardest-hit. by the opioid epidemic. Using a hybrid type-one effectiveness implementation design, we propose a simple but. effective package of treatment and harm reduction interventions to reduce subsequent opioid use and related. harms in diverse contexts. Our pragmatic trial is thus well-positioned to test effectiveness while collecting. contextual data for implementation.",
+      "activity_code": "UG1",
+      "project_title": "Reducing Opioid Mortality in Illinois (ROMI)",
+      "subproject_id": null,
+      "covid_response": null,
+      "org_state_name": null,
+      "agency_ic_admin": {
+        "code": "DA",
+        "name": "National Institute on Drug Abuse",
+        "abbreviation": "NIDA"
+      },
+      "contact_pi_name": "POLLACK, HAROLD ALEXANDER",
+      "direct_cost_amt": 1506045,
+      "core_project_num": "UG1DA050066",
+      "program_officers": [
+        {
+          "email": null,
+          "full_name": "CARRIE FRIED Mulford",
+          "last_name": "Mulford",
+          "first_name": "CARRIE",
+          "middle_name": "FRIED"
+        }
+      ],
+      "project_end_date": "2024-04-30T12:04:00Z",
+      "award_notice_date": "2019-07-15T12:07:00Z",
+      "funding_mechanism": "Other Research-Related",
+      "indirect_cost_amt": 391598,
+      "mechanism_code_dc": "OR",
+      "organization_type": {
+        "code": "10",
+        "name": "SCHOOLS OF SOCIAL WELFARE/WORK",
+        "is_other": false
+      },
+      "project_num_split": {
+        "ic_code": "DA",
+        "serial_num": "050066",
+        "suffix_code": "",
+        "support_year": "01",
+        "activity_code": "UG1",
+        "appl_type_code": "1",
+        "full_support_year": "01"
+      },
+      "agency_ic_fundings": [
+        {
+          "fy": 2019,
+          "code": "DA",
+          "name": "National Institute on Drug Abuse",
+          "total_cost": 1897643,
+          "abbreviation": "NIDA"
+        }
+      ],
+      "full_study_section": {
+        "name": "Special Emphasis Panel[ZDA1 HXO-H (05)]",
+        "srg_code": "ZDA1",
+        "srg_flex": "",
+        "group_code": "05",
+        "sra_flex_code": "H",
+        "sra_designator_code": "HXO"
+      },
+      "project_detail_url": "https://reporter.nih.gov/project-details/9882847",
+      "project_serial_num": "DA050066",
+      "project_start_date": "2019-07-15T12:07:00Z",
+      "special_topic_code": null,
+      "spending_categories": [89, 176, 180, 187, 240, 3641, 298, 372, 4076, 3951, 701, 770, 817],
+      "init_encumbrance_date": "2019-07-15T12:07:31Z",
+      "principal_investigators": [
+        {
+          "email": null,
+          "title": "PROFESSOR",
+          "full_name": "HAROLD Alexander POLLACK",
+          "last_name": "POLLACK",
+          "first_name": "HAROLD",
+          "profile_id": 6878257,
+          "middle_name": "Alexander",
+          "is_contact_pi": true
+        },
+        {
+          "email": null,
+          "title": "ASSISTANT PROFESSOR",
+          "full_name": "Mai Tuyet Pho",
+          "last_name": "Pho",
+          "first_name": "Mai",
+          "profile_id": 9651175,
+          "middle_name": "Tuyet",
+          "is_contact_pi": false
+        },
+        {
+          "email": null,
+          "title": "ASSOCIATE PROFESSOR OF MEDICINE",
+          "full_name": "John  Schneider",
+          "last_name": "Schneider",
+          "first_name": "John",
+          "profile_id": 9345377,
+          "middle_name": "",
+          "is_contact_pi": false
+        }
+      ],
+      "spending_categories_desc": "Behavioral and Social Science; Clinical Research; Clinical Trials and Supportive Activities; Comparative Effectiveness Research; Drug Abuse (NIDA only); Health Disparities; Health Services; Injury (total) Accidents/Adverse Effects; Opioid Misuse and Addiction; Opioids; Prevention; Rural Health; Substance Abuse"
+    },
+    "gen3_discovery": {
+      "tags": [
+        {
+          "name": "JCOIN",
+          "category": "Data Repository"
+        },
+        {
+          "name": "Clinical Research",
+          "category": "Study Type"
+        },
+        {
+          "name": "Implementation Research",
+          "category": "Study Type"
+        },
+        {
+          "name": "Interview/Focus Group",
+          "category": "Data Type"
+        },
+        {
+          "name": "Questionnaire/Survey/Assessment",
+          "category": "Data Type"
+        },
+        {
+          "name": "Human",
+          "category": "Subject Type"
+        },
+        {
+          "name": "Adult (19 to 44 years)",
+          "category": "Age"
+        },
+        {
+          "name": "Middle aged adult (45 to 64 years)",
+          "category": "Age"
+        },
+        {
+          "name": "Aged adult (65 to 79 years)",
+          "category": "Age"
+        },
+        {
+          "name": "Aged, 80 and over (80 years and over)",
+          "category": "Age"
+        },
+        {
+          "name": "Infant, newborn (Birth to 1 month)",
+          "category": "Age"
+        },
+        {
+          "name": "Infant (1 to 23 months)",
+          "category": "Age"
+        },
+        {
+          "name": "Child, preschool (2 to 5 years)",
+          "category": "Age"
+        },
+        {
+          "name": "Child (6 to 12 years)",
+          "category": "Age"
+        },
+        {
+          "name": "Adolescent (13 to 18 years)",
+          "category": "Age"
+        },
+        {
+          "name": "Justice Community Opioid Innovation Network",
+          "category": "Research Program"
+        }
+      ],
+      "authz": "",
+      "appl_id": "9882847",
+      "doi_url": "https://healdata.org/portal/discovery/HDP00362/",
+      "_hdp_uid": "HDP00362",
+      "doi_dates": [],
+      "doi_sizes": [],
+      "__manifest": "",
+      "doi_titles": "Reducing Opioid Mortality in Illinois (ROMI)",
+      "doi_formats": [],
+      "doi_version": "",
+      "doi_citation": "Pollack, H. A., Pho, M. T., & Schneider, J. (2023). Reducing Opioid Mortality in Illinois (ROMI). HEAL Data Platform. 10.60490/RH7X-MY08",
+      "doi_creators": "Pollack, Harold Alexander & Pho, Mai Tuyet & Schneider, John",
+      "doi_language": null,
+      "doi_subjects": [],
+      "institutions": "UNIVERSITY OF CHICAGO",
+      "year_awarded": "2019",
+      "doi_publisher": "HEAL Data Platform",
+      "is_registered": true,
+      "project_title": "Reducing Opioid Mortality in Illinois (ROMI)",
+      "doi_identifier": "10.60490/rh7x-my08",
+      "doi_rightsList": [],
+      "project_number": "1UG1DA050066-01",
+      "study_metadata": {
+        "data": {
+          "data_type": [
+            "Interview/Focus Group - semi-structured",
+            "Questionnaire/Survey/Assessment"
+          ],
+          "data_source": [
+            "Administrative",
+            "Researcher Collected/Measured",
+            "Patient-Reported"
+          ],
+          "data_orientation": [
+            "Quantitative",
+            "Qualitative"
+          ],
+          "subject_data_level_available": [
+            "Individual - Aggregated"
+          ],
+          "subject_data_unit_of_analysis": [
+            "Individual",
+            "Community, Group, Cluster, Population"
+          ],
+          "subject_data_unit_of_collection": [
+            "Individual"
+          ],
+          "subject_geographic_data_level_available": [
+            "County"
+          ],
+          "subject_geographic_data_level_collected": [
+            "Zip code"
+          ],
+          "subject_data_unit_of_analysis_expected_number": "600",
+          "subject_data_unit_of_collection_expected_number": "1500"
+        },
+        "citation": {
+          "funding": [],
+          "investigators": [
+            {
+              "investigator_last_name": "POLLACK",
+              "investigator_first_name": "HAROLD",
+              "investigator_middle_initial": "A"
+            },
+            {
+              "investigator_last_name": "Pho",
+              "investigator_first_name": "Mai",
+              "investigator_middle_initial": "T"
+            },
+            {
+              "investigator_last_name": "Schneider",
+              "investigator_first_name": "John",
+              "investigator_middle_initial": ""
+            }
+          ],
+          "study_collections": [],
+          "heal_funded_status": "",
+          "heal_platform_citation": "Pollack, H. A., Pho, M. T., & Schneider, J. (2023). Reducing Opioid Mortality in Illinois (ROMI). HEAL Data Platform. 10.60490/RH7X-MY08",
+          "study_collection_status": "",
+          "heal_platform_persistent_ID": "10.60490/RH7X-MY08"
+        },
+        "findings": {
+          "primary_publications": [],
+          "primary_study_findings": [],
+          "secondary_publications": []
+        },
+        "study_type": {
+          "study_stage": [
+            "Clinical Research",
+            "Implementation Research"
+          ],
+          "study_type_design": [
+            "Parallel Assignment",
+            "Randomized Control Trial",
+            "Parallel"
+          ],
+          "study_subject_type": [
+            "Human"
+          ],
+          "study_primary_or_secondary": "Primary Research",
+          "study_observational_or_experimental": "Experimental Research"
+        },
+        "minimal_info": {
+          "study_name": "Reducing Opioid Mortality in Illinois (ROMI)",
+          "study_description": "Many opioid harm reduction services are designed and implemented to serve urban populations in traditional centers of opioid use and leave rural patients underserved. The proposed project seeks to demonstrate improved MAT participation, naloxone distribution, and syringe support services (SSPs) among justice-involved persons with opioid use disorders, and thus improve health and criminal justice outcomes across diverse urban and rural settings in Illinois. Reducing Opioid Mortality in Illinois (ROMI) is a multi-site trial that will be carried out using a hub-and-spoke model, with centralized long-standing social services infrastructure at the Community Outreach Intervention Projects (COIP) hosted at the University of Illinois at Chicago. COIP provides case management/transition of care services to justice-involved opioid users, extending resources and technical assistance to less-populated rural areas hardest hit by the opioid epidemic.",
+          "alternative_study_name": "Justice Community Opioid Innovation Network (JCOIN): Reducing Opioid Mortality in Illinois",
+          "alternative_study_description": "This NIDA-funded multi-site randomized control trial (RCT) examines the effectiveness of an established, intensive case management model for study participants who are awaiting release from four jails and two prisons across Illinois. The investigators seek to demonstrate that a unified case management approach can improve treatment engagement and retention among individuals who face high risks of opioid use disorders, overdose, and related harms. The investigators will examine the impact of case management and peer recovery coaching on participants' engagement with treatment and harm reduction interventions. The investigators will also study secondary outcomes including insurance enrollment, re-arrest, use of mental health services, and more.\n\nROMI will enroll at least 300 individuals with opioid disorders in the CMPR group, and at least 300 participants in the naloxone-only across five geographically distinct sites of care. All participants will receive harm reduction resources. The investigators hypothesize that the treatment group will display declines in opioid use, re-arrest, self-reported syringe sharing, and overdose risk behaviors relative to the control groups. The investigators will also examine differences between urban - rural and rural differences in treatment engagement and retention engagement, retention, and downstream outcomes across treatment arms. Aside from demonstrating these treatment impacts, the investigators will guide, document and evaluate ROMI's implementation efforts to ensure consistency across sites across sites and to inform future replication of the model in different settings or for different populations. (Edited 11/27/23 to reflect changes in recruitment from 500 in each treatment arm to 300)"
+        },
+        "data_availability": {
+          "produce_data": "Yes",
+          "produce_other": "Yes",
+          "data_available": "some",
+          "data_restricted": "some",
+          "data_release_status": "not started",
+          "data_collection_status": "started",
+          "data_release_start_date": "Will adhere to NIH JCOIN approved plan",
+          "data_release_finish_date": "",
+          "data_collection_start_date": "2021-08-10",
+          "data_collection_finish_date": "2026-08-30"
+        },
+        "metadata_location": {
+          "data_repositories": [
+            {
+              "repository_name": "JCOIN",
+              "repository_citation": "Users must also include a citation to the data as specified by the local repository.",
+              "repository_study_ID": "",
+              "repository_persistent_ID": ""
+            }
+          ],
+          "nih_reporter_link": "https://reporter.nih.gov/project-details/9882847",
+          "nih_application_id": 9882847,
+          "other_study_websites": [],
+          "clinical_trials_study_ID": "NCT04925427",
+          "clinical_trials_study_link": "https://clinicaltrials.gov/study/NCT04925427",
+          "cedar_study_level_metadata_template_instance_ID": "https://repo.metadatacenter.org/template-instances/96c2e9ec-55cb-4353-a52f-1d64a0edead9"
+        },
+        "clinicaltrials_gov": {
+          "StartDate": "August 10, 2021",
+          "OfficialTitle": "Justice Community Opioid Innovation Network (JCOIN): Reducing Opioid Mortality in Illinois",
+          "CompletionDate": "August 30, 2026",
+          "EnrollmentCount": "600",
+          "DetailedDescription": "This NIDA-funded multi-site randomized control trial (RCT) examines the effectiveness of an established, intensive case management model for study participants who are awaiting release from four jails and two prisons across Illinois. The investigators seek to demonstrate that a unified case management approach can improve treatment engagement and retention among individuals who face high risks of opioid use disorders, overdose, and related harms. The investigators will examine the impact of case management and peer recovery coaching on participants' engagement with treatment and harm reduction interventions. The investigators will also study secondary outcomes including insurance enrollment, re-arrest, use of mental health services, and more.\n\nROMI will enroll at least 500 individuals with opioid disorders in the CMPR group, and at least 500 participants in the naloxone-only across five geographically distinct sites of care. All participants will receive harm reduction resources. The investigators hypothesize that the treatment group will display declines in opioid use, re-arrest, self-reported syringe sharing, and overdose risk behaviors relative to the control groups. The investigators will also examine differences between urban - rural and rural differences in treatment engagement and retention engagement, retention, and downstream outcomes across treatment arms. Aside from demonstrating these treatment impacts, the investigators will guide, document and evaluate ROMI's implementation efforts to ensure consistency across sites across sites and to inform future replication of the model in different settings or for different populations.",
+          "IPDSharingTimeFrame": "Will adhere to NIH JCOIN approved plan"
+        },
+        "contacts_and_registrants": {
+          "contacts": [],
+          "registrants": []
+        },
+        "study_translational_focus": {
+          "study_translational_focus": "Treatment of a Condition",
+          "study_translational_topic_grouping": [
+            "Mental Health",
+            "Social Determinants"
+          ]
+        },
+        "human_subject_applicability": {
+          "age_applicability": [
+            "Adult (19 to 44 years)",
+            "Middle aged adult (45 to 64 years)",
+            "Aged adult (65 to 79 years)",
+            "Aged, 80 and over (80 years and over)",
+            "Infant, newborn (Birth to 1 month)",
+            "Infant (1 to 23 months)",
+            "Child, preschool (2 to 5 years)",
+            "Child (6 to 12 years)",
+            "Adolescent (13 to 18 years)"
+          ],
+          "gender_applicability": [],
+          "geographic_applicability": [
+            "IL"
+          ],
+          "biological_sex_applicability": [
+            "Male",
+            "Female"
+          ],
+          "sexual_identity_applicability": [],
+          "irb_vulnerability_conditions_applicability": [
+            "Prisoners"
+          ]
+        },
+        "human_condition_applicability": {
+          "condition_category": [
+            "Opioid use and opioid use disorder",
+            "(Non-opioid) Substance use",
+            "Opioid overdose"
+          ],
+          "all_other_condition": [],
+          "all_outcome_condition": [
+            "Substance-Related Disorders"
+          ],
+          "pain_causal_condition": [],
+          "condition_investigation_stage_or_type": [
+            "Treatment of condition"
+          ],
+          "all_treatment_or_study_target_condition": [
+            "Substance-Related Disorders"
+          ],
+          "pain_treatment_or_study_target_condition": []
+        },
+        "human_treatment_applicability": {
+          "treatment_mode": [
+            "Harm Reduction (preventing more of an occurrence, or preventing harm from an occurrence)"
+          ],
+          "treatment_type": [
+            "behavioral"
+          ],
+          "treatment_novelty": [
+            "Established, used in novel population, setting, or combination"
+          ],
+          "treatment_application_level": [
+            "Individual"
+          ],
+          "treatment_investigation_stage_or_type": [
+            "differential treatment efficacy",
+            "treatment implementation"
+          ]
+        }
+      },
+      "dataset_1_title": "",
+      "dataset_2_title": "",
+      "dataset_3_title": "",
+      "dataset_4_title": "",
+      "dataset_5_title": "",
+      "doi_identifiers": "",
+      "related_studies": [],
+      "administering_ic": "National Institute on Drug Abuse",
+      "advSearchFilters": [
+        {
+          "key": "Study Type",
+          "value": "Clinical Research"
+        },
+        {
+          "key": "Study Type",
+          "value": "Implementation Research"
+        },
+        {
+          "key": "Data Type",
+          "value": "Interview/Focus Group"
+        },
+        {
+          "key": "Data Type",
+          "value": "Questionnaire/Survey/Assessment"
+        },
+        {
+          "key": "Subject Type",
+          "value": "Human"
+        },
+        {
+          "key": "Age",
+          "value": "Adult (19 to 44 years)"
+        },
+        {
+          "key": "Age",
+          "value": "Middle aged adult (45 to 64 years)"
+        },
+        {
+          "key": "Age",
+          "value": "Aged adult (65 to 79 years)"
+        },
+        {
+          "key": "Age",
+          "value": "Aged, 80 and over (80 years and over)"
+        },
+        {
+          "key": "Age",
+          "value": "Infant, newborn (Birth to 1 month)"
+        },
+        {
+          "key": "Age",
+          "value": "Infant (1 to 23 months)"
+        },
+        {
+          "key": "Age",
+          "value": "Child, preschool (2 to 5 years)"
+        },
+        {
+          "key": "Age",
+          "value": "Child (6 to 12 years)"
+        },
+        {
+          "key": "Age",
+          "value": "Adolescent (13 to 18 years)"
+        },
+        {
+          "key": "Research Program",
+          "value": "Justice Community Opioid Innovation Network"
+        }
+      ],
+      "doi_contributors": "",
+      "doi_descriptions": "",
+      "doi_geoLocations": [],
+      "research_program": "Justice Community Opioid Innovation Network",
+      "doi_resource_type": "Study Record",
+      "investigators_name": [
+        "HAROLD Alexander POLLACK",
+        "Mai Tuyet Pho",
+        "John  Schneider"
+      ],
+      "registration_authz": "/study/9882847",
+      "doi_resolvable_link": "https://doi.org/10.60490/rh7x-my08",
+      "registrant_username": "philschumm@gmail.com",
+      "research_focus_area": "Translation of Research to Practice for the Treatment of Opioid Addiction",
+      "doi_publication_year": 2023,
+      "time_of_registration": "2023-02-22T08:23:26-08:00",
+      "doi_fundingReferences": "",
+      "doi_relatedIdentifiers": [],
+      "doi_alternateIdentifiers": "",
+      "doi_resource_type_general": "Other",
+      "study_description_summary": "Many opioid harm reduction services are designed and implemented to serve urban populations in traditional centers of opioid use and leave rural patients underserved. The proposed project seeks to demonstrate improved MAT participation, naloxone distribution, and syringe support services (SSPs) among justice-involved persons with opioid use disorders, and thus improve health and criminal justice outcomes across diverse urban and rural settings in Illinois. Reducing Opioid Mortality in Illinois (ROMI) is a multi-site trial that will be carried out using a hub-and-spoke model, with centralized long-standing social services infrastructure at the Community Outreach Intervention Projects (COIP) hosted at the University of Illinois at Chicago. COIP provides case management/transition of care services to justice-involved opioid users, extending resources and technical assistance to less-populated rural areas hardest hit by the opioid epidemic.",
+      "time_of_last_cedar_updated": "2024-06-26T08:53:04-07:00"
+    },
+    "clinicaltrials_gov": {
+      "protocolSection": {
+        "designModule": {
+          "phases": [
+            "NA"
+          ],
+          "studyType": "INTERVENTIONAL",
+          "designInfo": {
+            "allocation": "RANDOMIZED",
+            "primaryPurpose": "SUPPORTIVE_CARE",
+            "interventionModel": "PARALLEL"
+          },
+          "enrollmentInfo": {
+            "type": "ESTIMATED",
+            "count": 1500
+          }
+        },
+        "statusModule": {
+          "overallStatus": "RECRUITING",
+          "startDateStruct": {
+            "date": "2021-08-10",
+            "type": "ACTUAL"
+          },
+          "completionDateStruct": {
+            "date": "2026-08-30",
+            "type": "ESTIMATED"
+          }
+        },
+        "outcomesModule": {
+          "primaryOutcomes": [
+            {
+              "measure": "Addiction treatment engagement"
+            }
+          ],
+          "secondaryOutcomes": [
+            {
+              "measure": "Percent of participants enrolled in Medicaid or private insurance"
+            },
+            {
+              "measure": "Percent of participant utilizing mental health services"
+            },
+            {
+              "measure": "Days of Opioid Use"
+            },
+            {
+              "measure": "Days of stimulant Use"
+            },
+            {
+              "measure": "Opioid Use Disorder (OUD) Symptoms"
+            },
+            {
+              "measure": "Stimulant Use Disorder Symptoms"
+            },
+            {
+              "measure": "Patient Reported Outcomes Measurement Information System"
+            },
+            {
+              "measure": "Health services costs"
+            },
+            {
+              "measure": "Re-arrest and Re-incarceration"
+            },
+            {
+              "measure": "Self-reported rate of illegal activity"
+            },
+            {
+              "measure": "Social cost of self reported crime"
+            },
+            {
+              "measure": "Social cost of re-arrest and associated offenses"
+            },
+            {
+              "measure": "All-cause mortality"
+            }
+          ]
+        },
+        "oversightModule": {
+          "isFdaRegulatedDrug": false,
+          "isFdaRegulatedDevice": false
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Opioid Use",
+            "Opioid-use Disorder"
+          ]
+        },
+        "descriptionModule": {
+          "briefSummary": "Reducing Opioid Mortality in Illinois (ROMI) is 5-year research study led by the University of Chicago in partnership with the University of Illinois at Chicago's (UIC) Community Outreach Intervention Projects (COIP), the Illinois Criminal Justice Information Authority (ICJIA) and the American Institutes for Research (AIR). ROMI aims to understand and test strategies for linking individuals with a history of opioid use disorder who are released from Illinois jails and prisons to substance use treatment. ROMI is one of twelve grants awarded by the National Institutes of Health (NIH) as part of the Justice Community Opioid Innovation Network (JCOIN) to support research on quality addiction treatment for opioid use disorder in criminal justice settings nationwide.",
+          "detailedDescription": "This NIDA-funded multi-site randomized control trial (RCT) examines the effectiveness of an established, intensive case management model for study participants who are awaiting release from four jails and two prisons across Illinois. The investigators seek to demonstrate that a unified case management approach can improve treatment engagement and retention among individuals who face high risks of opioid use disorders, overdose, and related harms. The investigators will examine the impact of case management and peer recovery coaching on participants' engagement with treatment and harm reduction interventions. The investigators will also study secondary outcomes including insurance enrollment, re-arrest, use of mental health services, and more.\n\nROMI will enroll at least 300 individuals with opioid disorders in the CMPR group, and at least 300 participants in the naloxone-only across five geographically distinct sites of care. All participants will receive harm reduction resources. The investigators hypothesize that the treatment group will display declines in opioid use, re-arrest, self-reported syringe sharing, and overdose risk behaviors relative to the control groups. The investigators will also examine differences between urban - rural and rural differences in treatment engagement and retention engagement, retention, and downstream outcomes across treatment arms. Aside from demonstrating these treatment impacts, the investigators will guide, document and evaluate ROMI's implementation efforts to ensure consistency across sites across sites and to inform future replication of the model in different settings or for different populations. (Edited 11/27/23 to reflect changes in recruitment from 500 in each treatment arm to 300)"
+        },
+        "eligibilityModule": {
+          "sex": "ALL",
+          "minimumAge": "18 Years"
+        },
+        "identificationModule": {
+          "nctId": "NCT04925427",
+          "acronym": "ROMI",
+          "briefTitle": "Reducing Opioid Mortality in Illinois",
+          "officialTitle": "Justice Community Opioid Innovation Network (JCOIN): Reducing Opioid Mortality in Illinois"
+        },
+        "armsInterventionsModule": {
+          "interventions": [
+            {
+              "type": "BEHAVIORAL"
+            },
+            {
+              "type": "BEHAVIORAL"
+            }
+          ]
+        },
+        "ipdSharingStatementModule": {
+          "timeFrame": "Will adhere to NIH JCOIN approved plan",
+          "ipdSharing": "YES",
+          "accessCriteria": "Will adhere to NIH JCOIN approved plan"
+        }
+      }
+    },
+    "variable_level_metadata": {
+      "data_dictionaries": {
+        "Staff participants: Baseline measures": "d6eb80d1-882c-48c7-b02e-4c14d66db235",
+        "Client participants: Baseline measures": "4e2c1f62-dcd9-40ec-9634-0727d0ed2cef",
+        "Client participants: Timepoint measures": "3742c7b1-b347-4071-a6f1-56a95b1ee723",
+        "Staff participants: staff-specific timepoint measures": "508d8dd1-d20e-4284-bf0a-2a46682ed351"
+      }
+    }
+  }

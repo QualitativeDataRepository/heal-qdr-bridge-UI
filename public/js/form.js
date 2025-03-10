@@ -1,9 +1,16 @@
 document.addEventListener("DOMContentLoaded", function () {
     document.querySelector("form").addEventListener("submit", function (event) {
+        const requestData = new FormData();
         event.preventDefault(); 
 
         const source = document.getElementById("source").value;
-        const healId = document.getElementById("healId").value;
+        const sourceDataType = document.getElementById("dataType").value;
+        
+        //Heal source type can be either project id or uploading json file
+        const healID = document.getElementById("healId").value;
+        const jsonFile = document.getElementById("jsonFile").files[0];
+
+
         const destination = document.getElementById("destination").value;
         const apiKey = document.getElementById("apiKey").value;
 
@@ -12,8 +19,13 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
 
-        if (source === "heal" && !healId) {
+        if (sourceDataType === "projectId" && !healID) {
             alert("Please enter a Heal Project ID.");
+            return;
+        }
+
+        if (sourceDataType === "jsonFile" && !jsonFile) {
+            alert("Please upload study metadata json file.");
             return;
         }
 
@@ -22,19 +34,23 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
 
-        const requestData = {
-            source,
-            healId: source === "heal" ? healId : null,
-            destination,
-            apiKey: destination === "dataverse" ? apiKey : null
-        };
+        requestData.append("source", source);
+        requestData.append("sourceDataType", sourceDataType);
+        requestData.append("destination", destination);
+
+        if (sourceDataType === "projectId") {
+            requestData.append("sourceContent", healID);
+        } else {
+            requestData.append("sourceContent", jsonFile);
+        }
+
+        if (destination === "dataverse") {
+            requestData.append("apiKey", apiKey);
+        }
 
         fetch("/push/qdr", {
             method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(requestData)
+            body: requestData,
         })
         .then(response => response.json())
         .then(data => {
