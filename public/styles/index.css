@@ -1,7 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300&family=Raleway:ital,wght@0,100..900;1,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
 
+/**  General Styles
+*/
+
+p {
+    margin-bottom: 8px;
+}
+
 .full-height {
-    height: 80vh;
+    height: 75vh;
 }
 
 .banner {
@@ -10,7 +17,7 @@
     align-items: center;
     padding: 20px; 
     background-color: #ffffff; 
-    height: 80vh;
+    height: 75vh;
 }
 
 .banner img {
@@ -53,5 +60,6 @@ label {
 /** Footer Styling */
 
 footer {
+    height: 25vh;
     padding: 2rem 10rem 2rem 10rem;
 }
