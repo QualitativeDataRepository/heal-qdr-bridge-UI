@@ -64,6 +64,11 @@
           "type": "string",
           "label": "ClinicalTrials.gov Study ID"
         },
+        "clinical_trials_study_link": {
+          "description": "Link to the study",
+          "type": "string",
+          "label": "Link to the study"
+        },
         "data_repositories":{
           "description": "Describe the data repositories to which data or other shareable products produced by the study will be submitted by the study authors and stored for long-term access; one item in this array per repository",
           "type": "array",
@@ -344,48 +349,44 @@
           "description": "If study will collect/produce data, indicate whether all, some, or none of the data will be made available",
           "type": "string",
           "label": "Will the study make data available?",
-          "enum": ["all","some","none"]
+          "enum": ["all","some","none", ""]
         },
         "data_restricted": {
           "description": "If study will collect/produce data, and make at least some of that data available, indicate whether all, some, or none of the data will have restriction(s) on access beyond acknowledgement and signing of a minimal DSA",
           "type": "string",
           "label": "Will available data have restrictions on access?",
-          "enum": ["all","some","none"]
+          "enum": ["all","some","none", ""]
         },
         "data_collection_status": {
           "description": "If study will collect/produce data, indicate whether the study has not started, has started, or has finished data collection/production activities",
           "type": "string",
           "label": "Has data collection/production started?",
-          "enum": ["not started","started","finished"]
+          "enum": ["not started","started","finished", ""]
         },
         "data_release_status": {
           "description": "If the study will collect/produce data and make at least some of the data available, indicate whether the study has not started, has started, or has finished data release activities",
           "type": "string",
           "label": "Has data release started?",
-          "enum": ["not started","started","finished"]
+          "enum": ["not started","started","finished", ""]
         },
         "data_collection_start_date": {
           "description": "If the study will collect/produce data, indicate the anticipated date when data collection/production will begin",
           "type": "string",
-          "format": "date",
           "label": "Date when first data will be collected/produced (Anticipated)"
         },
         "data_collection_finish_date": {
           "description": "If the study will collect/produce data, indicate the anticipated date when data collection/production will end (data collection/production is complete)",
           "type": "string",
-          "format": "date",
           "label": "Date when last data will be collected/produced (Anticipated)"
         },
         "data_release_start_date": {
           "description": "If study will collect/produce data and make at least some of the data available, indicate the anticipated date when first data will be released",
           "type": "string",
-          "format": "date",
           "label": "Date when first data will be released (Anticipated)"
         },
         "data_release_finish_date": {
           "description": "If study will produce data and make at least some of the data available, indicate the anticipated date when last data will be released (data release is complete)",
           "type": "string",
-          "format": "date",
           "label": "Date when last data will be released (Anticipated)"
         },
         "produce_other": {
@@ -435,7 +436,8 @@
           "label": "Study Translational Focus",
           "enum": [
             "Condition",
-            "Treatment of a Condition"
+            "Treatment of a Condition",
+            "Treatment", ""
           ]
         },
         "study_translational_topic_grouping": {
@@ -482,7 +484,7 @@
           "label": "Is the study conducting primary or secondary research?",
           "enum": [
               "Primary Research",
-              "Secondary Research"
+              "Secondary Research", ""
             ]
         },
         "study_observational_or_experimental": {
@@ -491,7 +493,7 @@
           "label": "Is the study conducting observational or experimental research?",
           "enum": [
               "Observational Research",
-              "Experimental Research"
+              "Experimental Research", ""
             ]
         },
         "study_subject_type": {
@@ -516,6 +518,7 @@
           "items": {
             "type": "string",
             "enum": [
+              "Basic Research – Gene sequencing",
               "Basic Research – Biochemistry study",
               "Parallel",
               "Parallel Assignment",

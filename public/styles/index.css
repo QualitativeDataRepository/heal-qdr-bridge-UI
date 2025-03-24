@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300&family=Raleway:ital,wght@0,100..900;1,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+@import url('customfont.css');
 
 /**  General Styles
 */
@@ -27,7 +27,7 @@ p {
 }
 
 .banner-heading {
-    font-family: "Bebas Neue", sans-serif;
+    font-family: AntoniaH2;
     font-weight: 400;
     font-style: normal;
 }
@@ -48,10 +48,11 @@ p {
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
+    font-family: "AntoniaH2", sans-serif;
 }
 
 label {
-    font-family: "Raleway", sans-serif;
+    font-family: "AntoniaH2", sans-serif;
     font-optical-sizing: auto;
     font-weight: 300;
     font-style: normal;
@@ -60,6 +61,7 @@ label {
 /** Footer Styling */
 
 footer {
+    font-family: "AntoniaH2", sans-serif;
     height: 25vh;
     padding: 2rem 10rem 2rem 10rem;
 }

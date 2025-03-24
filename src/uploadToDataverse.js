@@ -35,6 +35,7 @@ const uploadDataverse = (json, api) => {
       resp.on('end', () => {
         try {
           const parsedData = JSON.parse(data);
+          console.log(resp.statusCode)
           if (resp.statusCode >= 200 && resp.statusCode < 300) {
             resolve(parsedData);
           } else {

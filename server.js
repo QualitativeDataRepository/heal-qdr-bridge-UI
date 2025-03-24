@@ -1,4 +1,5 @@
 const express  = require('express')
+const fs = require('fs');
 const path = require('path')
 const multer = require('multer');
 const healToDataverse = require('./src/convertToDataverse')
@@ -49,11 +50,12 @@ app.post('/push/qdr', upload.single("sourceContent"), async (req, res) => {
       healDataPayload = JSON.parse(req.file.buffer.toString("utf-8"));
     }
 
-    console.log(healDataPayload)
-
     try {
         const dataverseJSON = healToDataverse(healDataPayload);
-        console.log(JSON.stringify(dataverseJSON, null, 2))
+        fs.writeFileSync('sample.json', JSON.stringify(dataverseJSON, null, 2), 'utf-8');
+        // console.log(dataverseJSON)
+        // console.log(JSON.stringify(dataverseJSON, null, 2))
+        // console.log(req.body.apiKey)
         await uploadToDataverse(dataverseJSON, req.body.apiKey)
 
         res.status(200).json({

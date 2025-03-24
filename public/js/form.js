@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
         const destination = document.getElementById("destination").value;
+        console.log(destination)
         const apiKey = document.getElementById("apiKey").value;
 
         if (!source || !destination) {
@@ -29,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
 
-        if (destination === "dataverse" && !apiKey) {
+        if (destination === "dataverse-qdr" && !apiKey) {
             alert("Please enter an API Key.");
             return;
         }
@@ -44,7 +45,8 @@ document.addEventListener("DOMContentLoaded", function () {
             requestData.append("sourceContent", jsonFile);
         }
 
-        if (destination === "dataverse") {
+        if (destination === "dataverse-qdr") {
+            console.log("Comes here")
             requestData.append("apiKey", apiKey);
         }
 

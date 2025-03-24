@@ -3,7 +3,12 @@
  * @param {object} input - HEAL json object
  * @return {object} Dataverse JSON object to upload to a server instance
  */
+const moment = require('moment');
+
 const healToDataverse = (input)=>{
+
+    const datefields = ["data_collection_start_date", "data_collection_finish_date", "data_release_start_date", "data_release_finish_date"]
+
     var output = { datasetVersion: { metadataBlocks: {
             citation: { fields: new Array,
                 name: "citation", displayName: "Citation Metadata" },
@@ -50,8 +55,25 @@ const healToDataverse = (input)=>{
                         multiple: false,
                     };
                     
-                    let field_schema = schema['properties'][key]['properties'][key_2];
+                    let field_schema_key = schema['properties'][key];
+
+                    if(typeof field_schema_key === 'undefined'){
+                        return;
+                    }
+
+                    let field_schema = field_schema_key['properties'][key_2];
+
+                    if(typeof field_schema === 'undefined'){
+                        return;
+                    }
+
                     let field_type = field_schema.type;
+
+                    // if(datefields.includes(key_2) && !moment(input[key][key_2], "YYYY-MM-DD", true).isValid()){
+                    //     // console.log(key_2 + "is excluded");
+                    //     return;
+                    // }
+                    
                     console.log(key, key_2, field_type)
                     new_field.value[key_2]['value'] = input[key][key_2];
 
@@ -62,10 +84,22 @@ const healToDataverse = (input)=>{
                         } else {
                             new_field.value[key_2].value = "No";
                         }
-                    } 
+                    }
+
+                    // handling logic for date fields
+                    else if(datefields.includes(key_2)){
+                        new_field.value[key_2].typeClass = "primitive"
+                        if(moment(input[key][key_2], "YYYY-MM-DD", true).isValid()){
+                            new_field.value[key_2].value = input[key][key_2]
+                        }else{
+                            new_field.value[key_2].value = ""
+                        }
+                        
+                    }
 
                     // start by handling simple strings, detect controlledVocab
                     else if (field_type == "string") {
+                        console.log(key_2)
                         if (typeof field_schema.enum !== "undefined") {
                             new_field.value[key_2].typeClass = "controlledVocabulary";
                         } else {
@@ -223,7 +257,6 @@ const healToDataverse = (input)=>{
         throw "need a contact";
     }
 
-    
 
     datasetContact = { value: new Array, typeClass: "compound",
         multiple: true, typeName: "datasetContact" };

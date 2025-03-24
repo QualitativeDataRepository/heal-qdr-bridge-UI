@@ -1,0 +1,644 @@
+{
+  "datasetVersion": {
+    "metadataBlocks": {
+      "citation": {
+        "fields": [
+          {
+            "value": "Sympathetic-mediated sensory neuron cluster firing as a novel therapeutic target for neuropathic pain",
+            "typeClass": "primitive",
+            "multiple": false,
+            "typeName": "title"
+          },
+          {
+            "value": [
+              {
+                "authorName": {
+                  "value": "Dong, Xinzhong",
+                  "typeClass": "primitive",
+                  "multiple": false,
+                  "typeName": "authorName"
+                },
+                "authorAffiliation": {
+                  "value": "",
+                  "typeClass": "primitive",
+                  "multiple": false,
+                  "typeName": "authorAffiliation"
+                },
+                "authorIdentifierScheme": {
+                  "value": "ORCID",
+                  "typeName": "authorIdentifierScheme",
+                  "multiple": false,
+                  "typeClass": "controlledVocabulary"
+                },
+                "authorIdentifier": {
+                  "value": "",
+                  "typeName": "authorIdentifier",
+                  "multiple": false,
+                  "typeClass": "primitive"
+                }
+              },
+              {
+                "authorName": {
+                  "value": "Zhang, Jun-Ming",
+                  "typeClass": "primitive",
+                  "multiple": false,
+                  "typeName": "authorName"
+                },
+                "authorAffiliation": {
+                  "value": "",
+                  "typeClass": "primitive",
+                  "multiple": false,
+                  "typeName": "authorAffiliation"
+                },
+                "authorIdentifierScheme": {
+                  "value": "ORCID",
+                  "typeName": "authorIdentifierScheme",
+                  "multiple": false,
+                  "typeClass": "controlledVocabulary"
+                },
+                "authorIdentifier": {
+                  "value": "",
+                  "typeName": "authorIdentifier",
+                  "multiple": false,
+                  "typeClass": "primitive"
+                }
+              }
+            ],
+            "typeClass": "compound",
+            "multiple": true,
+            "typeName": "author"
+          },
+          {
+            "value": [],
+            "typeClass": "compound",
+            "multiple": true,
+            "typeName": "datasetContact"
+          },
+          {
+            "value": [
+              {
+                "dsDescriptionValue": {
+                  "value": "An important component of neuropathic pain is spontaneous or ongoing pain, such as burning pain or intermittent paroxysms of sharp and shooting pain, which may result from abnormal spontaneous activity in sensory nerves. However, due to technical limitations, spontaneous activity in sensory neurons in vivo has not been well studied. Using in vivo imaging in genetically-modified mice, preliminary findings identified spontaneously-firing clusters of neurons formed within the dorsal root ganglia (DRG) after traumatic nerve injury that exhibits increased spontaneous pain behaviors. Furthermore, preliminary evidence has been collected that cluster firing may be related to abnormal sympathetic sprouting in the sensory ganglia. This project will test the hypothesis that cluster firing is triggered by abnormal sympathetic inputs to sensory neurons, and that it underpins spontaneous paroxysmal pain in neuropathic pain models. Findings from this project will identify potential novel therapeutic targets for the treatment of neuropathic pain.",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "typeName": "dsDescriptionValue"
+                }
+              }
+            ],
+            "typeClass": "compound",
+            "multiple": true,
+            "typeName": "dsDescription"
+          },
+          {
+            "value": [
+              "Medicine, Health and Life Sciences"
+            ],
+            "typeClass": "controlledVocabulary",
+            "multiple": true,
+            "typeName": "subject"
+          }
+        ],
+        "name": "citation",
+        "displayName": "Citation Metadata"
+      },
+      "heal": {
+        "fields": [
+          {
+            "typeName": "data",
+            "typeClass": "compound",
+            "multiple": false,
+            "value": {
+              "data_type": {
+                "typeName": "data_type",
+                "multiple": true,
+                "value": [],
+                "typeClass": "controlledVocabulary"
+              },
+              "data_source": {
+                "typeName": "data_source",
+                "multiple": true,
+                "value": [],
+                "typeClass": "controlledVocabulary"
+              },
+              "data_orientation": {
+                "typeName": "data_orientation",
+                "multiple": true,
+                "value": [],
+                "typeClass": "controlledVocabulary"
+              },
+              "subject_data_level_available": {
+                "typeName": "subject_data_level_available",
+                "multiple": true,
+                "value": [],
+                "typeClass": "controlledVocabulary"
+              },
+              "subject_data_unit_of_analysis": {
+                "typeName": "subject_data_unit_of_analysis",
+                "multiple": true,
+                "value": [],
+                "typeClass": "controlledVocabulary"
+              },
+              "subject_data_unit_of_collection": {
+                "typeName": "subject_data_unit_of_collection",
+                "multiple": true,
+                "value": [],
+                "typeClass": "controlledVocabulary"
+              },
+              "subject_geographic_data_level_available": {
+                "typeName": "subject_geographic_data_level_available",
+                "multiple": true,
+                "value": [],
+                "typeClass": "controlledVocabulary"
+              },
+              "subject_geographic_data_level_collected": {
+                "typeName": "subject_geographic_data_level_collected",
+                "multiple": true,
+                "value": [],
+                "typeClass": "controlledVocabulary"
+              },
+              "subject_data_unit_of_analysis_expected_number": {
+                "typeName": "subject_data_unit_of_analysis_expected_number",
+                "multiple": false,
+                "value": "",
+                "typeClass": "primitive"
+              },
+              "subject_data_unit_of_collection_expected_number": {
+                "typeName": "subject_data_unit_of_collection_expected_number",
+                "multiple": false,
+                "value": "",
+                "typeClass": "primitive"
+              }
+            }
+          },
+          {
+            "typeName": "heal_citation",
+            "typeClass": "compound",
+            "multiple": false,
+            "value": {
+              "funding": {
+                "typeName": "funding",
+                "multiple": false,
+                "value": []
+              },
+              "investigators": {
+                "typeName": "investigators",
+                "multiple": false,
+                "value": [
+                  {
+                    "investigator_last_name": "Dong",
+                    "investigator_first_name": "Xinzhong",
+                    "investigator_middle_initial": "",
+                    "investigator_ID": [
+                      {
+                        "investigator_ID_type": "ORCID",
+                        "investigator_ID_value": ""
+                      }
+                    ],
+                    "investigator_affiliation": ""
+                  },
+                  {
+                    "investigator_last_name": "Zhang",
+                    "investigator_first_name": "Jun-Ming",
+                    "investigator_middle_initial": "",
+                    "investigator_ID": [
+                      {
+                        "investigator_ID_type": "ORCID",
+                        "investigator_ID_value": ""
+                      }
+                    ],
+                    "investigator_affiliation": ""
+                  }
+                ]
+              },
+              "study_collections": {
+                "typeName": "study_collections",
+                "multiple": true,
+                "value": [],
+                "typeClass": "primitive"
+              },
+              "heal_funded_status": {
+                "typeName": "heal_funded_status",
+                "multiple": false,
+                "value": "No",
+                "typeClass": "controlledVocabulary"
+              },
+              "heal_platform_citation": {
+                "typeName": "heal_platform_citation",
+                "multiple": false,
+                "value": "",
+                "typeClass": "primitive"
+              },
+              "study_collection_status": {
+                "typeName": "study_collection_status",
+                "multiple": false,
+                "value": "No",
+                "typeClass": "controlledVocabulary"
+              },
+              "heal_platform_persistent_ID": {
+                "typeName": "heal_platform_persistent_ID",
+                "multiple": false,
+                "value": "",
+                "typeClass": "primitive"
+              }
+            }
+          },
+          {
+            "typeName": "findings",
+            "typeClass": "compound",
+            "multiple": false,
+            "value": {
+              "primary_publications": {
+                "typeName": "primary_publications",
+                "multiple": true,
+                "value": [],
+                "typeClass": "primitive"
+              },
+              "primary_study_findings": {
+                "typeName": "primary_study_findings",
+                "multiple": true,
+                "value": [],
+                "typeClass": "primitive"
+              },
+              "secondary_publications": {
+                "typeName": "secondary_publications",
+                "multiple": true,
+                "value": [],
+                "typeClass": "primitive"
+              }
+            }
+          },
+          {
+            "typeName": "study_type",
+            "typeClass": "compound",
+            "multiple": false,
+            "value": {
+              "study_stage": {
+                "typeName": "study_stage",
+                "multiple": true,
+                "value": [],
+                "typeClass": "controlledVocabulary"
+              },
+              "study_type_design": {
+                "typeName": "study_type_design",
+                "multiple": true,
+                "value": [],
+                "typeClass": "controlledVocabulary"
+              },
+              "study_subject_type": {
+                "typeName": "study_subject_type",
+                "multiple": true,
+                "value": [],
+                "typeClass": "controlledVocabulary"
+              },
+              "study_primary_or_secondary": {
+                "typeName": "study_primary_or_secondary",
+                "multiple": false,
+                "value": "",
+                "typeClass": "controlledVocabulary"
+              },
+              "study_observational_or_experimental": {
+                "typeName": "study_observational_or_experimental",
+                "multiple": false,
+                "value": "",
+                "typeClass": "controlledVocabulary"
+              }
+            }
+          },
+          {
+            "typeName": "minimal_info",
+            "typeClass": "compound",
+            "multiple": false,
+            "value": {
+              "study_name": {
+                "typeName": "study_name",
+                "multiple": false,
+                "value": "Sympathetic-mediated sensory neuron cluster firing as a novel therapeutic target for neuropathic pain",
+                "typeClass": "primitive"
+              },
+              "study_description": {
+                "typeName": "study_description",
+                "multiple": false,
+                "value": "An important component of neuropathic pain is spontaneous or ongoing pain, such as burning pain or intermittent paroxysms of sharp and shooting pain, which may result from abnormal spontaneous activity in sensory nerves. However, due to technical limitations, spontaneous activity in sensory neurons in vivo has not been well studied. Using in vivo imaging in genetically-modified mice, preliminary findings identified spontaneously-firing clusters of neurons formed within the dorsal root ganglia (DRG) after traumatic nerve injury that exhibits increased spontaneous pain behaviors. Furthermore, preliminary evidence has been collected that cluster firing may be related to abnormal sympathetic sprouting in the sensory ganglia. This project will test the hypothesis that cluster firing is triggered by abnormal sympathetic inputs to sensory neurons, and that it underpins spontaneous paroxysmal pain in neuropathic pain models. Findings from this project will identify potential novel therapeutic targets for the treatment of neuropathic pain.",
+                "typeClass": "primitive"
+              },
+              "alternative_study_name": {
+                "typeName": "alternative_study_name",
+                "multiple": false,
+                "value": "",
+                "typeClass": "primitive"
+              },
+              "alternative_study_description": {
+                "typeName": "alternative_study_description",
+                "multiple": false,
+                "value": "",
+                "typeClass": "primitive"
+              }
+            }
+          },
+          {
+            "typeName": "data_availability",
+            "typeClass": "compound",
+            "multiple": false,
+            "value": {
+              "produce_data": {
+                "typeName": "produce_data",
+                "multiple": false,
+                "value": "No",
+                "typeClass": "controlledVocabulary"
+              },
+              "produce_other": {
+                "typeName": "produce_other",
+                "multiple": false,
+                "value": "No",
+                "typeClass": "controlledVocabulary"
+              },
+              "data_available": {
+                "typeName": "data_available",
+                "multiple": false,
+                "value": "",
+                "typeClass": "controlledVocabulary"
+              },
+              "data_restricted": {
+                "typeName": "data_restricted",
+                "multiple": false,
+                "value": "",
+                "typeClass": "controlledVocabulary"
+              },
+              "data_release_status": {
+                "typeName": "data_release_status",
+                "multiple": false,
+                "value": "",
+                "typeClass": "controlledVocabulary"
+              },
+              "data_collection_status": {
+                "typeName": "data_collection_status",
+                "multiple": false,
+                "value": "",
+                "typeClass": "controlledVocabulary"
+              },
+              "data_release_start_date": {
+                "typeName": "data_release_start_date",
+                "multiple": false,
+                "value": "",
+                "typeClass": "primitive"
+              },
+              "data_release_finish_date": {
+                "typeName": "data_release_finish_date",
+                "multiple": false,
+                "value": "",
+                "typeClass": "primitive"
+              },
+              "data_collection_start_date": {
+                "typeName": "data_collection_start_date",
+                "multiple": false,
+                "value": "",
+                "typeClass": "primitive"
+              },
+              "data_collection_finish_date": {
+                "typeName": "data_collection_finish_date",
+                "multiple": false,
+                "value": "",
+                "typeClass": "primitive"
+              }
+            }
+          },
+          {
+            "typeName": "metadata_location",
+            "typeClass": "compound",
+            "multiple": false,
+            "value": {
+              "nih_reporter_link": {
+                "typeName": "nih_reporter_link",
+                "multiple": false,
+                "value": "https://reporter.nih.gov/project-details/9869461",
+                "typeClass": "primitive"
+              },
+              "nih_application_id": {
+                "typeName": "nih_application_id",
+                "multiple": false,
+                "value": "9869461",
+                "typeClass": "primitive"
+              },
+              "other_study_websites": {
+                "typeName": "other_study_websites",
+                "multiple": true,
+                "value": [],
+                "typeClass": "primitive"
+              },
+              "clinical_trials_study_ID": {
+                "typeName": "clinical_trials_study_ID",
+                "multiple": false,
+                "value": "",
+                "typeClass": "primitive"
+              },
+              "cedar_study_level_metadata_template_instance_ID": {
+                "typeName": "cedar_study_level_metadata_template_instance_ID",
+                "multiple": false,
+                "value": "https://repo.metadatacenter.org/template-instances/5e86125a-bad9-41e0-80d3-e9d07fcdf07c",
+                "typeClass": "primitive"
+              }
+            }
+          },
+          {
+            "typeName": "documentation_link",
+            "typeClass": "compound",
+            "multiple": false,
+            "value": {}
+          },
+          {
+            "typeName": "study_translational_focus_group",
+            "typeClass": "compound",
+            "multiple": false,
+            "value": {
+              "study_translational_focus": {
+                "typeName": "study_translational_focus",
+                "multiple": false,
+                "value": "",
+                "typeClass": "controlledVocabulary"
+              },
+              "study_translational_topic_grouping": {
+                "typeName": "study_translational_topic_grouping",
+                "multiple": true,
+                "value": [],
+                "typeClass": "controlledVocabulary"
+              }
+            }
+          },
+          {
+            "typeName": "human_subject_applicability",
+            "typeClass": "compound",
+            "multiple": false,
+            "value": {
+              "age_applicability": {
+                "typeName": "age_applicability",
+                "multiple": true,
+                "value": [],
+                "typeClass": "controlledVocabulary"
+              },
+              "gender_applicability": {
+                "typeName": "gender_applicability",
+                "multiple": true,
+                "value": [],
+                "typeClass": "controlledVocabulary"
+              },
+              "geographic_applicability": {
+                "typeName": "geographic_applicability",
+                "multiple": true,
+                "value": [],
+                "typeClass": "controlledVocabulary"
+              },
+              "biological_sex_applicability": {
+                "typeName": "biological_sex_applicability",
+                "multiple": true,
+                "value": [],
+                "typeClass": "controlledVocabulary"
+              },
+              "sexual_identity_applicability": {
+                "typeName": "sexual_identity_applicability",
+                "multiple": true,
+                "value": [],
+                "typeClass": "controlledVocabulary"
+              },
+              "irb_vulnerability_conditions_applicability": {
+                "typeName": "irb_vulnerability_conditions_applicability",
+                "multiple": true,
+                "value": [],
+                "typeClass": "controlledVocabulary"
+              }
+            }
+          },
+          {
+            "typeName": "human_condition_applicability",
+            "typeClass": "compound",
+            "multiple": false,
+            "value": {
+              "condition_category": {
+                "typeName": "condition_category",
+                "multiple": true,
+                "value": [],
+                "typeClass": "controlledVocabulary"
+              },
+              "all_other_condition": {
+                "typeName": "all_other_condition",
+                "multiple": true,
+                "value": [],
+                "typeClass": "primitive"
+              },
+              "all_outcome_condition": {
+                "typeName": "all_outcome_condition",
+                "multiple": true,
+                "value": [],
+                "typeClass": "primitive"
+              },
+              "pain_causal_condition": {
+                "typeName": "pain_causal_condition",
+                "multiple": true,
+                "value": [],
+                "typeClass": "primitive"
+              },
+              "condition_investigation_stage_or_type": {
+                "typeName": "condition_investigation_stage_or_type",
+                "multiple": true,
+                "value": [],
+                "typeClass": "controlledVocabulary"
+              },
+              "all_treatment_or_study_target_condition": {
+                "typeName": "all_treatment_or_study_target_condition",
+                "multiple": true,
+                "value": [],
+                "typeClass": "primitive"
+              },
+              "pain_treatment_or_study_target_condition": {
+                "typeName": "pain_treatment_or_study_target_condition",
+                "multiple": true,
+                "value": [],
+                "typeClass": "controlledVocabulary"
+              }
+            }
+          },
+          {
+            "typeName": "human_treatment_applicability",
+            "typeClass": "compound",
+            "multiple": false,
+            "value": {
+              "treatment_mode": {
+                "typeName": "treatment_mode",
+                "multiple": false,
+                "typeClass": "controlledVocabulary"
+              },
+              "treatment_type": {
+                "typeName": "treatment_type",
+                "multiple": true,
+                "value": [],
+                "typeClass": "controlledVocabulary"
+              },
+              "treatment_novelty": {
+                "typeName": "treatment_novelty",
+                "multiple": false,
+                "typeClass": "controlledVocabulary"
+              },
+              "treatment_application_level": {
+                "typeName": "treatment_application_level",
+                "multiple": false,
+                "typeClass": "controlledVocabulary"
+              },
+              "treatment_investigation_stage_or_type": {
+                "typeName": "treatment_investigation_stage_or_type",
+                "multiple": true,
+                "value": [],
+                "typeClass": "controlledVocabulary"
+              }
+            }
+          },
+          {
+            "typeName": "registrants",
+            "typeClass": "compound",
+            "multiple": true,
+            "value": []
+          },
+          {
+            "typeName": "data_repositories",
+            "typeClass": "compound",
+            "multiple": true,
+            "value": [
+              {
+                "repository_name": {
+                  "typeName": "repository_name",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "Figshare"
+                },
+                "repository_citation": {
+                  "typeName": "repository_citation",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "Users must also include a citation to the data as specified by the local repository. The link to the study page at the local repository can be found in the \"Data\" tab."
+                },
+                "repository_study_ID": {
+                  "typeName": "repository_study_ID",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "26311492"
+                },
+                "repository_study_link": {
+                  "typeName": "repository_study_link",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "https://figshare.com/articles/dataset/cluster_firing_data_qz_xlsx/26311492"
+                },
+                "repository_persistent_ID": {
+                  "typeName": "repository_persistent_ID",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": ""
+                }
+              }
+            ]
+          }
+        ],
+        "displayName": "HEAL metadata schema",
+        "name": "heal"
+      }
+    }
+  }
+}
