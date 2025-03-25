@@ -52,7 +52,7 @@ app.post('/push/qdr', upload.single("sourceContent"), async (req, res) => {
 
     try {
         const dataverseJSON = healToDataverse(healDataPayload);
-        fs.writeFileSync('sample.json', JSON.stringify(dataverseJSON, null, 2), 'utf-8');
+        //fs.writeFileSync('sample.json', JSON.stringify(dataverseJSON, null, 2), 'utf-8');
         // console.log(dataverseJSON)
         // console.log(JSON.stringify(dataverseJSON, null, 2))
         // console.log(req.body.apiKey)

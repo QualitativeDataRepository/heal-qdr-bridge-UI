@@ -520,7 +520,11 @@
             "enum": [
               "Basic Research – Gene sequencing",
               "Basic Research – Biochemistry study",
+              "Basic Research – Small molecule screen",
+              "Basic Research – High throughput screen",
+              "Basic Research – Screen, other",
               "Parallel",
+              "Sequential",
               "Parallel Assignment",
               "Basic Research - Theory/Modeling",
               "Basic Research - Applied",
@@ -586,7 +590,14 @@
               "Male",
               "Transgender man/trans man/female-to-male (FTM)",
               "Genderqueer/gender nonconforming/neither exclusively male nor female",
-              "Other"
+              "Other",
+              "Cis Male",
+              "Cis Female",
+              "Trans Male",
+              "Trans Female",
+              "Agender, Non-binary, gender non-conforming",
+              "Gender Queer",
+              "Intersex"
             ]
           }
         },
@@ -601,7 +612,10 @@
               "Homosexual (gay/lesbian)",
               "Bisexual",
               "Asexual",
-              "Other"
+              "Other",
+              "Homosexual",
+              "Pansexual",
+              "Queer"
               ]
           }
         },

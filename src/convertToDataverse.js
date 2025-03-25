@@ -7,7 +7,21 @@ const moment = require('moment');
 
 const healToDataverse = (input)=>{
 
+    //Preprocessing the input data before it goes to validator
+    //getting cases of study_stage being empty or being a string 
+    // instead of array cauing validator to fail
+    if(input.study_type.study_stage === ""){
+        delete input.study_type.study_stage
+    }
+
+    if (typeof input.study_type.study_stage === "string") {
+        input.study_type.study_stage = [input.study_type.study_stage];
+        console.log(input.study_type.study_stage)
+    }
+
+
     const datefields = ["data_collection_start_date", "data_collection_finish_date", "data_release_start_date", "data_release_finish_date"]
+    const flowingEmptyFields = ["study_primary_or_secondary", "study_observational_or_experimental", "data_release_status", "data_available", "data_collection_status", "data_restricted", "study_translational_focus"]
 
     var output = { datasetVersion: { metadataBlocks: {
             citation: { fields: new Array,
@@ -74,7 +88,7 @@ const healToDataverse = (input)=>{
                     //     return;
                     // }
                     
-                    console.log(key, key_2, field_type)
+                    // console.log(key, key_2, field_type)
                     new_field.value[key_2]['value'] = input[key][key_2];
 
                     if(key_2 === "heal_funded_status" || key_2 === "study_collection_status" || key_2 === "produce_data" || key_2 === "produce_other"){
@@ -99,8 +113,12 @@ const healToDataverse = (input)=>{
 
                     // start by handling simple strings, detect controlledVocab
                     else if (field_type == "string") {
-                        console.log(key_2)
-                        if (typeof field_schema.enum !== "undefined") {
+                        //any empty fields can be deleted
+                        if(flowingEmptyFields.includes(key_2) && new_field.value[key_2].value == ""){
+                            delete new_field.value[key_2]
+                        }
+                        // console.log(key_2)
+                        else if (typeof field_schema.enum !== "undefined") {
                             new_field.value[key_2].typeClass = "controlledVocabulary";
                         } else {
                             new_field.value[key_2].typeClass = "primitive";
@@ -114,19 +132,30 @@ const healToDataverse = (input)=>{
                     
                     // handling more complex objects
                     } else if (field_type == "array") {
+                        var isRemoved = false;
                         if (field_schema.items.type == "string") {
                             new_field.value[key_2].multiple = true;
                             if (key_2 == "treatment_mode" || key_2 == "treatment_application_level" || key_2 == "treatment_novelty") {
                                 new_field.value[key_2].multiple = false;
-                                new_field.value[key_2]['value'] = new_field.value[key_2]['value'][0]; 
+                                if(new_field.value[key_2]['value'][0]){
+                                    new_field.value[key_2]['value'] = new_field.value[key_2]['value'][0]; 
+                                }else{
+                                    //treatment_mode, treatment_application_level, treatment_novelty
+                                    // are sometimes coming as empty array [] can't extract value [0] 
+                                    // "" are prohibited too at dataverse side so deleting the field
+                                    delete new_field.value[key_2]
+                                    isRemoved = true
+                                }
                             }
 
-                            // Is there controlled vocabulary?
-                            if (typeof field_schema.items.enum !== 'undefined') {
-                                new_field.value[key_2].typeClass = "controlledVocabulary";
-                            } else {
-                                //new_field.value[key_2].multiple = false;
-                                new_field.value[key_2].typeClass = "primitive";
+                            if(!isRemoved){
+                                // Is there controlled vocabulary?
+                                if (typeof field_schema.items.enum !== 'undefined') {
+                                    new_field.value[key_2].typeClass = "controlledVocabulary";
+                                } else {
+                                    //new_field.value[key_2].multiple = false;
+                                    new_field.value[key_2].typeClass = "primitive";
+                                }
                             }
                         }
                     }
