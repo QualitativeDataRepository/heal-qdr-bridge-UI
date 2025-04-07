@@ -13,6 +13,10 @@
 
 </head>
 <body>
+    <!-- Loader Container -->
+    <div id="loading-overlay">
+        <div class="loader"></div>
+    </div>
     <!-- Form container -->
     <div class="container-fluid">
         <div class="row full-height">
@@ -63,8 +67,8 @@
                     <button type="submit" class="mt-2 button-style btn btn-primary btn-large">Start Transfer</button>
                 </form>
             </div>
-            <div class="col-6 banner">
-                <img src="assets/banner-image.png" alt="Banner Image">
+            <div class="col-6 banner" id="apiResponseContainer">
+                <img id="bannerImage" src="assets/banner-image.png" alt="Banner Image">
             </div>
         </div>
     </div>

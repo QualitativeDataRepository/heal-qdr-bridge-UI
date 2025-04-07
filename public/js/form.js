@@ -1,6 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () {
     document.querySelector("form").addEventListener("submit", function (event) {
         const requestData = new FormData();
+        const overlay = document.getElementById("loading-overlay");
+        const bannerImage = document.getElementById("bannerImage"); 
+
+        console.log(bannerImage)
+
         event.preventDefault(); 
 
         const source = document.getElementById("source").value;
@@ -46,20 +51,64 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         if (destination === "dataverse-qdr") {
-            console.log("Comes here")
+
             requestData.append("apiKey", apiKey);
         }
+
+        overlay.style.display = "flex";
 
         fetch("/push/qdr", {
             method: "POST",
             body: requestData,
         })
-        .then(response => response.json())
-        .then(data => {
-            alert(data.message);
+        .then(response => response.json().then(data => ({ status: response.status, body: data }))) 
+        .then(({ status, body }) => {
+            console.log(body)
+            let message = "";
+            
+            switch (status) {
+                case 200:
+                    if(body.created){
+                        message = `✅ Success! Your data has been pushed to QDR. You can access it here: <a href="https://data.stage.qdr.org/dataset.xhtml?persistentId=${body.persistentId}" target="_blank">${body.persistentId}</a>`;
+                    }else{
+                        message = `⚠️ Record with same dataset title already exists. You can access it here: <a href="https://data.stage.qdr.org/dataset.xhtml?persistentId=${body.persistentId}" target="_blank">${body.persistentId}</a>`;
+                    }
+                    break;
+                case 400:
+                    message = "⚠️ Bad Request: Your input data might be incorrect.";
+                    break;
+                case 401:
+                    message = "❌ Unauthorized: Your API key might be incorrect.";
+                    break;
+                case 403:
+                    message = "⛔ Forbidden: You do not have permission to perform this action.";
+                    break;
+                case 404:
+                    message = "🔍 Not Found: The requested resource was not found.";
+                    break;
+                case 500:
+                    message = "❌ Server Error: Something went wrong on our end. Please try again later.";
+                    break;
+                default:
+                    message = `❌ Unexpected error (Status ${status}): ${body.message || "Please contact <a mailto:'qdr@syr.edu'> support</a>. "}`;
+            }
+
+            if(bannerImage){
+                bannerImage.style.display = "none";
+            }
+            
+            apiResponseContainer.innerHTML = `
+                <div class="card shadow-sm p-3">
+                    <p class="text-dark">${message}</p>
+                </div>
+            `;
         })
         .catch(error => {
-            alert("Error: " + error.message);
+            console.log(error)
+            apiResponseContainer.innerHTML = `<p class="text-danger">❌ Network Error: ${error.message}</p>`;
+        })
+        .finally(() => {
+            overlay.style.display = "none";
         });
     });
 });

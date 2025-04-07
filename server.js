@@ -5,6 +5,7 @@ const multer = require('multer');
 const healToDataverse = require('./src/convertToDataverse')
 const uploadToDataverse = require('./src/uploadToDataverse')
 const getDataFromHeal = require('./src/getDataFromHeal')
+const checkRecordDataverse = require('./src/checkRecordDataverse')
 
 const app = express();
 const upload = multer({ storage: multer.memoryStorage() });
@@ -56,11 +57,22 @@ app.post('/push/qdr', upload.single("sourceContent"), async (req, res) => {
         // console.log(dataverseJSON)
         // console.log(JSON.stringify(dataverseJSON, null, 2))
         // console.log(req.body.apiKey)
-        await uploadToDataverse(dataverseJSON, req.body.apiKey)
 
-        res.status(200).json({
-          message: 'Data processed successfully!'
-        });
+        const dataverseCheck = await checkRecordDataverse(dataverseJSON.datasetVersion.metadataBlocks.citation.fields[0].value, req.body.apiKey);
+
+        if(dataverseCheck.datasetExists){
+          res.status(200).json({
+            created: false,
+            persistentId: dataverseCheck.persistentId
+          });
+        }else{
+          const dataverseUploadResponse = await uploadToDataverse(dataverseJSON, req.body.apiKey)
+
+          res.status(200).json({
+            created: true,
+            persistentId: dataverseUploadResponse.data.persistentId
+          });
+        }
 
       } catch (error) {
         console.log('Some error', error.message)
