@@ -18,27 +18,6 @@ app.get('/', (_req, res) => {
     res.sendFile(path.join(__dirname, './views/index.html'))
 })
 
-// Helper endpoint would not be called by frontend directly
-
-app.get('/healdata/:id', async (req, res) => {
-
-  try {
-    const id = req.params.id;
-    const data = await getDataFromHeal(id)
-    
-    res.status(200).json({
-      message: 'Data processed successfully!',
-      data
-    });
-
-  } catch (error) {
-    console.log('Some error', error.message)
-    res.status(500).json({
-        message: 'Error processing the data.',
-        error: error.message,
-    });
-  }
-});
 
 app.post('/push/qdr', upload.single("sourceContent"), async (req, res) => {
 
@@ -53,11 +32,6 @@ app.post('/push/qdr', upload.single("sourceContent"), async (req, res) => {
 
     try {
         const dataverseJSON = healToDataverse(healDataPayload);
-        //fs.writeFileSync('sample.json', JSON.stringify(dataverseJSON, null, 2), 'utf-8');
-        // console.log(dataverseJSON)
-        // console.log(JSON.stringify(dataverseJSON, null, 2))
-        // console.log(req.body.apiKey)
-
         const dataverseCheck = await checkRecordDataverse(dataverseJSON.datasetVersion.metadataBlocks.citation.fields[0].value, req.body.apiKey);
 
         if(dataverseCheck.datasetExists){
@@ -81,7 +55,7 @@ app.post('/push/qdr', upload.single("sourceContent"), async (req, res) => {
             error: error.message,
         });
       }
-  });
+});
 
 app.listen(8080, () => {
     console.log('Server is running on port 8080')
