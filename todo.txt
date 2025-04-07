@@ -1,0 +1,3 @@
+1. Add neat documentation 
+2. Mobile responsive layout
+3. Host the site

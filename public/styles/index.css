@@ -11,6 +11,10 @@ p {
     height: 75vh;
 }
 
+form {
+    width: 75%;
+}
+
 .banner {
     display: flex;
     justify-content: center;
@@ -113,3 +117,37 @@ footer {
     0% { box-shadow: 0 0 0 2px inset }
     100% { box-shadow: 0 0 0 10px inset }
 }
+
+@media screen and (max-width: 768px) {
+    .button-style {
+        width: 100% !important;
+    }
+
+    footer{
+        height: 30vh !important;
+    }
+  }
+
+
+  @media screen and (max-width: 768px) {
+    .button-style {
+        width: 100% !important;
+    }
+
+    .full-height {
+        background-image: url('../assets/banner-image.png');
+        height: 100vh !important;
+    }
+
+    form {
+        width: 100%;
+        padding: 10%;
+        background-color: white;
+        border-radius: 20px;
+    }
+
+    .banner {
+        display: none;
+    }
+  }
+  
