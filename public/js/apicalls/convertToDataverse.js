@@ -3,9 +3,13 @@
  * @param {object} input - HEAL json object
  * @return {object} Dataverse JSON object to upload to a server instance
  */
-const moment = require('moment');
 
-const healToDataverse = (input)=>{
+const isValidDate = (dateString) => {
+    const date = new Date(dateString);
+    return !isNaN(date.getTime()) && /^\d{4}-\d{2}-\d{2}$/.test(dateString);
+};
+
+export async function healToDataverse(input) {
 
     //Preprocessing the input data before it goes to validator
     //getting cases of study_stage being empty or being a string 
@@ -30,15 +34,17 @@ const healToDataverse = (input)=>{
                 displayName: "HEAL metadata schema", name: "heal" }
     }}};
 
-    const schema = require('../data/heal-schema-latest.json');
+    let schema = await fetch("./heal-schema-latest.json").then(response => response.json());
 
-    var Validator = require('jsonschema').Validator;
-    var v = new Validator();
-    const valid = v.validate(input, schema)
+    const Ajv = window.ajv2020
+    const ajv = new Ajv({strict: false})
 
-    if (!valid.valid) {
-        console.log(valid.errors);
-        throw "Invalid HEAL file";
+    const validate = ajv.compile(schema);
+    const valid = validate(input);
+
+    if (!valid) {
+        console.log("Invalid json schema")
+        return;
     }
 
 
@@ -103,7 +109,7 @@ const healToDataverse = (input)=>{
                     // handling logic for date fields
                     else if(datefields.includes(key_2)){
                         new_field.value[key_2].typeClass = "primitive"
-                        if(moment(input[key][key_2], "YYYY-MM-DD", true).isValid()){
+                        if(isValidDate(input[key][key_2])){
                             new_field.value[key_2].value = input[key][key_2]
                         }else{
                             new_field.value[key_2].value = ""
@@ -245,7 +251,7 @@ const healToDataverse = (input)=>{
         throw "Need an investigator";
     }
 
-    author = { value: new Array, typeClass: "compound", multiple: true, typeName: "author"};
+    let author = { value: new Array, typeClass: "compound", multiple: true, typeName: "author"};
     input.citation.investigators.forEach(function(investigator) {
         // missing investigator ID
         if (typeof investigator.investigator_ID == 'undefined') {
@@ -287,7 +293,7 @@ const healToDataverse = (input)=>{
     }
 
 
-    datasetContact = { value: new Array, typeClass: "compound",
+    let datasetContact = { value: new Array, typeClass: "compound",
         multiple: true, typeName: "datasetContact" };
     input.contacts_and_registrants.contacts.forEach(function(contact) {
         if (typeof contact.contact_email == 'undefined') {
@@ -316,7 +322,7 @@ const healToDataverse = (input)=>{
     });
     citation.push(datasetContact);
 
-    dsDescription = { value : new Array, typeClass: "compound", 
+    let dsDescription = { value : new Array, typeClass: "compound", 
         multiple: true, typeName: "dsDescription" };
     dsDescription.value.push({
         dsDescriptionValue: {
@@ -328,7 +334,7 @@ const healToDataverse = (input)=>{
     });
     citation.push(dsDescription);
 
-    subject = { value: new Array, typeClass: "controlledVocabulary", 
+    let subject = { value: new Array, typeClass: "controlledVocabulary", 
         multiple: true, typeName: "subject" };
     subject.value.push("Medicine, Health and Life Sciences");
     citation.push(subject);
@@ -336,5 +342,3 @@ const healToDataverse = (input)=>{
     return output;
     
 }
-
-module.exports = healToDataverse;

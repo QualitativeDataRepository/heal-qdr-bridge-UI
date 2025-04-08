@@ -1,3 +1,1 @@
-1. Add neat documentation 
 3. Host the site
-4. Add detailed logs for debugging
