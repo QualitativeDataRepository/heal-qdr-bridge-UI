@@ -1,5 +1,10 @@
+import { loadConfig } from '../config.js';
+
 export async function uploadToDataverse(dataverseJSON, apiKey){
-    const uploadRes = await fetch("https://data.stage.qdr.org/api/dataverses/heal/datasets", {
+
+    const config = loadConfig(window.location.hostname)
+
+    const uploadRes = await fetch(config.dataverse_upload_endpoint, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

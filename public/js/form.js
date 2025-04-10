@@ -1,6 +1,7 @@
 import { getDataFromHeal } from './apicalls/getDataFromHeal.js';
 import { healToDataverse } from './apicalls/convertToDataverse.js';
 import { uploadToDataverse } from './apicalls/uploadToDataverse.js';
+import { checkRecordDataverse } from './apicalls/checkRecordDataverse.js';
 
 document.addEventListener("DOMContentLoaded", function () {
     document.querySelector("form").addEventListener("submit", async function (event) {
@@ -49,9 +50,18 @@ document.addEventListener("DOMContentLoaded", function () {
                 healData = JSON.parse(fileText);
             }
 
-            const convertToDataverse = await healToDataverse(healData);
-            const message = await uploadToDataverse(convertToDataverse, apiKey);
 
+            const nih_persistent_id = healData.citation.heal_platform_persistent_ID
+            const duplicateCheck = await checkRecordDataverse(nih_persistent_id, apiKey);
+            let message = ''
+
+            if(duplicateCheck.datasetExists){
+                message = `⚠️ Record with same dataset title already exists. You can access it here: <a href="https://data.stage.qdr.org/dataset.xhtml?persistentId=${duplicateCheck.persistentId}" target="_blank">${duplicateCheck.persistentId}</a>`
+            }else{
+                const convertToDataverse = await healToDataverse(healData);
+                message = await uploadToDataverse(convertToDataverse, apiKey); 
+            }
+            
             apiResponseContainer.innerHTML = `
                     <div class="card shadow-sm p-3">
                         <p class="text-dark">${message}</p>

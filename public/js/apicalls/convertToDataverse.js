@@ -20,7 +20,7 @@ export async function healToDataverse(input) {
 
     if (typeof input.study_type.study_stage === "string") {
         input.study_type.study_stage = [input.study_type.study_stage];
-        console.log(input.study_type.study_stage)
+        //console.log(input.study_type.study_stage)
     }
 
 
