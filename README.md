@@ -12,8 +12,7 @@ User Interface based platform that helps pull data from heal and push to QDR.
 
 ### Prerequisites
 
-- [Node.js](https://nodejs.org/en/) (v16+ recommended)
-- [npm](https://www.npmjs.com/) (comes with Node.js)
+- Any local server. Recommended [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) (works well with VS code)
 - [Visual Studio Code](https://code.visualstudio.com/download) (or any preferred IDE)
 
 ### Steps
@@ -25,14 +24,11 @@ git clone https://github.com/QualitativeDataRepository/heal-qdr-bridge-UI.git
 # Navigate to the project directory
 cd heal-qdr-bridge-UI
 
-# Install dependencies
-npm install
-
-# Start the development server with nodemon
-nodemon server.js
+# Run the page locally
+Open index.html and right-click on the editor and click on Open with Live Server or use the 'Go Live' from the status bar to turn the server on/off.
 
 ```
-The server should now be accessible on localhost:8080
+The server should now be accessible on [localhost:8888](http://127.0.0.1:8888/)
 
 ## 📂 Project Structure
 
@@ -40,31 +36,47 @@ The server should now be accessible on localhost:8080
 ├── data
 ├── public - Assets and styles
 │   ├── assets
+│   ├── config
 │   ├── customfont
 │   ├── js
+│       └── apicalls
 │   └── styles
-├── src 
-└── views - UI Pages
-└── server.js - Backend API's starting point
+└── heal-schema-latest.json
+└── index.html - User Interface
 
 ```
 
-## 📡 API Endpoint: `/push/qdr`
+## 📡 User Interface: `index.html`
 
-This endpoint allows users to push metadata from HEAL or a  metadata JSON file to the QDR Dataverse.
+Has a basic form to allow user to enter the source and destination information. Form source and destination kept as dropdowns to allow more options in future.
 
-### 🔸 Method: `POST`
+For current implementation. 
 
-### 🔸 Content Type:
-- `multipart/form-data`
+Source: Heal - Followed by option to either supply project ID or json file
+Destination - Dataverse and prompt to supply user's account API Key
 
-### 🔸 Request Fields:
+## 🔑 API Key Generation : Dataverse
+
+### Environments
+
+1. **Stage Environment (Testing)**:  
+   For testing purposes, you can use the [QDR Stage site](https://data.stage.qdr.org/).
+   
+2. **Main Dataverse Environment**:  
+   For production use, please generate an API token from the [QDR Main site](https://qdr.syr.edu/).
+
+
+Refer Obtaining Your QDR API Token section from [docs](https://qdr.syr.edu/ati/anno-rep/logging-anno-rep-detailed-instructions)
+
+
+### 🔸 Form Fields:
 
 | Field Name        | Type     | Required | Description |
 |-------------------|----------|----------|-------------|
-| `sourceDataType`  | string   | ✅       | Must be `"projectId"` if fetching from HEAL, or any other value to upload a local JSON. |
-| `sourceContent`   | string / file | ✅  | If `sourceDataType` is `"projectId"`, this should be a HEAL project ID. Otherwise, a `.json` file should be uploaded. |
-| `apiKey`          | string   | ✅       | A valid QDR Dataverse API key for authentication and upload. |
+| `Select Source`   | string   | ✅       | For now only source available is `"HEAL Dataset"`. |
+| `Select Data Type`| string / file   | ✅       | Must be `"Project ID"` if fetching from HEAL, or `"JSON File"` to upload a local JSON of study level metadata. |
+| `Select Destination`| string  | ✅  | For now only source available is `"Dataverse - QDR"`. |
+| `Enter API Key`          | string   | ✅       | A valid QDR Dataverse API key for authentication and upload. |
 
 ### 📤 How It Works:
 
@@ -75,19 +87,10 @@ This endpoint allows users to push metadata from HEAL or a  metadata JSON file t
 
 Then:
 
-1. Transforms the metadata using `healToDataverse`.
-2. Checks Dataverse for existing datasets with the same title using `checkRecordDataverse`.
-3. If the dataset **already exists**, returns `created: false` and the `persistentId`.
-4. If not, uploads it using `uploadToDataverse` and returns `created: true` and the new `persistentId`.
-
-### ✅ Success Response
-
-```json
-{
-  "created": true,
-  "persistentId": "doi:10.5072/FK2/ABC123"
-}
-```
+1. Checks Dataverse for existing datasets with the same heal_platform_persistent_ID exists using logic at `checkRecordDataverse.js` 
+2. If the dataset **already exists**, returns `doi persistentId`.
+3. Else transforms the metadata to format suitable for upload using `convertToDataverse.js`.
+4. Uploads it to dataverse using `uploadToDataverse.js` and returns the new `doi persistentId`.
 
 ## 📬 Contact
 
