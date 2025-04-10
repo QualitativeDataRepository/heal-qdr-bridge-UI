@@ -2,8 +2,8 @@ import { loadConfig } from '../config.js';
 
 export async function getDataFromHeal(healID) {
 
-  const config = loadConfig(window.location.hostname)
-  const endpoint = `${config.heal_get_data_endpoint}${healID}`;
+  const config = loadConfig()
+  const endpoint = `${config.HEAL_BASE_URL}mds/metadata/${healID}`;
 
   try {
       const response = await fetch(endpoint);

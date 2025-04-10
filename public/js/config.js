@@ -1,16 +1,7 @@
-export function loadConfig(host){
+import devConfig from '../config/dev.js';
+import prodConfig from '../config/prod.js';
 
-    const env = host == "heal-qdr-bridge.io" ? "production" : "development"
-    const configs = {
-        "development" : {
-            "dataverse_upload_endpoint": "https://data.stage.qdr.org/api/dataverses/heal/datasets",
-            "heal_get_data_endpoint" : "https://healdata.org/mds/metadata/",
-            "dataverse_host_endpoint" : "https://data.stage.qdr.org/"
-        },
-        "production" : {
-    
-        }
-    }
-
-    return configs[env];
+export function loadConfig() {
+    const env = window.location.hostname === "qualitativedatarepository.github.io" ? "prod" : "dev";
+    return env === "prod" ? prodConfig : devConfig;
 }

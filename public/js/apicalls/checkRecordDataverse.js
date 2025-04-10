@@ -9,11 +9,12 @@ import { loadConfig } from '../config.js';
 
 export async function checkRecordDataverse(query, apiKey) {
 
-    const config = loadConfig(window.location.hostname)
-    const encodedQuery = encodeURIComponent(`"${query}"`);
-    const url = `${config.dataverse_host_endpoint}api/search?q=heal_platform_persistent_ID:${encodedQuery}&type=dataset&key=${apiKey}`;
+    const config = loadConfig()
 
-  
+    const encodedQuery = encodeURIComponent(`"${query}"`);
+
+    const url = `${config.DATAVERSE_BASE_URL}api/search?q=heal_platform_persistent_ID:${encodedQuery}&type=dataset&key=${apiKey}`;
+
     try {
       const response = await fetch(url);
       const data = await response.json();

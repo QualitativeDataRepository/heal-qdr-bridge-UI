@@ -2,9 +2,9 @@ import { loadConfig } from '../config.js';
 
 export async function uploadToDataverse(dataverseJSON, apiKey){
 
-    const config = loadConfig(window.location.hostname)
+    const config = loadConfig()
 
-    const uploadRes = await fetch(config.dataverse_upload_endpoint, {
+    const uploadRes = await fetch(`${config.DATAVERSE_BASE_URL}api/dataverses/heal/datasets`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
