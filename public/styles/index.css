@@ -8,7 +8,7 @@ p {
 }
 
 .full-height {
-    height: 75vh;
+    height: 90vh;
 }
 
 form {
@@ -21,7 +21,7 @@ form {
     align-items: center;
     padding: 20px; 
     background-color: #ffffff; 
-    height: 70vh;
+    height: fit-content;
 }
 
 .banner img {
