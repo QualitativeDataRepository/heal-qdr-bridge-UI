@@ -19,9 +19,10 @@ form {
     height: 80%;
 }
 
-#error-message{
+#error-message, #api-response-message{
     display: none;
 }
+
 
 .full-height{
     height: fit-content;

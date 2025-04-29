@@ -6,6 +6,27 @@ import { checkRecordDataverse } from './apicalls/checkRecordDataverse.js';
 document.addEventListener("DOMContentLoaded", function () {
     var formSubmitted = false
 
+    function showMessage(type, message) {
+        const isMobile = window.innerWidth <= 768;
+    
+        if (isMobile) {
+            const alertDiv = document.getElementById('api-response-message');
+            if (alertDiv) {
+                alertDiv.style.display = "block";
+                alertDiv.className = `alert alert-${type}`;
+                alertDiv.innerHTML = message;
+            }
+        } else {
+            const apiResponseContainer = document.getElementById('apiResponseContainer');
+            if (apiResponseContainer) {
+                const content = type === 'info'
+                    ? `<div class="card shadow-sm p-3"><p class="text-dark">${message}</p></div>`
+                    : `<p class="text-danger">❌ ${message}</p>`;
+                apiResponseContainer.innerHTML = content;
+            }
+        }
+    }    
+
     document.querySelector("form").addEventListener("submit", async function (event) {
         event.preventDefault(); 
 
@@ -26,26 +47,22 @@ document.addEventListener("DOMContentLoaded", function () {
         formSubmitted = true
 
         if (!source || !destination) {
-            alertBox.style.display = "block";
-            alertBox.innerHTML = "Please select both source and destination."
+            showMessage('warning', "Please select both source and destination.")
             return;
         }
 
         if (sourceDataType === "projectId" && !healID) {
-            alertBox.style.display = "block";
-            alertBox.innerHTML = "Please enter a Heal Project ID."
+            showMessage('warning', "Please enter a Heal Project ID.")
             return;
         }
 
         if (sourceDataType === "jsonFile" && !jsonFile) {
-            alertBox.style.display = "block";
-            alertBox.innerHTML = "Please upload study metadata json file."
+            showMessage('warning', "Please upload study metadata json file.")
             return;
         }
 
         if (destination === "dataverse-qdr" && !apiKey) {
-            alertBox.style.display = "block";
-            alertBox.innerHTML = "Please enter an API Key."
+            showMessage('warning', "Please enter an API Key.")
             return;
         }
 
@@ -73,15 +90,11 @@ document.addEventListener("DOMContentLoaded", function () {
                 message = await uploadToDataverse(convertToDataverse, apiKey); 
             }
             
-            apiResponseContainer.innerHTML = `
-                    <div class="card shadow-sm p-3">
-                        <p class="text-dark">${message}</p>
-                    </div>
-                `;
+            showMessage('info', message)
 
         }catch(error){
             console.error(error);
-            apiResponseContainer.innerHTML = `<p class="text-danger">❌ ${error.message}</p>`;
+            showMessage('warning', error.message);
         }finally{
             overlay.style.display = "none";
             formSubmitted = false
