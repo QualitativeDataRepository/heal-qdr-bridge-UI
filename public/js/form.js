@@ -77,17 +77,30 @@ document.addEventListener("DOMContentLoaded", function () {
                 healData = JSON.parse(fileText);
             }
 
+            if(!healData.citation){
+                showMessage('warning', 'Invalid metadata schema. Please check and retry')
+                return;
+            }
 
             const nih_persistent_id = healData.citation.heal_platform_persistent_ID
-            const duplicateCheck = await checkRecordDataverse(nih_persistent_id, apiKey);
             let message = ''
+            var duplicateCheck;
 
-            if(duplicateCheck.datasetExists){
+            console.log(nih_persistent_id)
+            if(nih_persistent_id){
+                duplicateCheck = await checkRecordDataverse(nih_persistent_id, apiKey);
+            }else{
+                message = `Missing heal_platform_persistent_ID from json schema, can't check if record exists at Dataverse adding new record. This may cause duplicates `
+            }
+
+            console.log(duplicateCheck)
+
+            if(duplicateCheck && duplicateCheck.datasetExists){
                 message = `⚠️ Record with same dataset title already exists. You can access it here: <a href="https://data.stage.qdr.org/dataset.xhtml?persistentId=${duplicateCheck.persistentId}" target="_blank">${duplicateCheck.persistentId}</a>`
                 formSubmitted = false
             }else{
                 const convertToDataverse = await healToDataverse(healData);
-                message = await uploadToDataverse(convertToDataverse, apiKey); 
+                message += await uploadToDataverse(convertToDataverse, apiKey); 
             }
             
             showMessage('info', message)
