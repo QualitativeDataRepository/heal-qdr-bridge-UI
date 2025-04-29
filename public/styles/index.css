@@ -3,16 +3,28 @@
 /**  General Styles
 */
 
+h2{
+    font-size: 20px !important;
+}
+
 p {
     margin-bottom: 8px;
 }
 
-.full-height {
-    height: 90vh;
-}
-
 form {
     width: 75%;
+}
+
+#form-container {
+    height: 80%;
+}
+
+#error-message{
+    display: none;
+}
+
+.full-height{
+    height: fit-content;
 }
 
 .banner {
@@ -20,8 +32,7 @@ form {
     justify-content: center;
     align-items: center;
     padding: 20px; 
-    background-color: #ffffff; 
-    height: 80vh;
+    background-color: #ffffff;
 }
 
 .banner img {
@@ -64,11 +75,11 @@ label {
 
 /** Footer Styling */
 
-footer {
+.footer {
     font-family: "AntoniaH2", sans-serif;
-    font-size: 18px !important;
-    height: 30vh;
-    padding: 2rem 10rem 2rem 10rem;
+    font-size: 16px !important;
+    padding: 2rem;
+    background-color: #f7fcfe;
 }
 
 /** Loader animation */
@@ -123,10 +134,6 @@ footer {
     .button-style {
         width: 100% !important;
     }
-
-    footer{
-        height: 30vh !important;
-    }
   }
 
 
@@ -135,9 +142,8 @@ footer {
         width: 100% !important;
     }
 
-    .full-height {
+    #form-container {
         background-image: url('../assets/banner-image.png');
-        height: 100vh !important;
     }
 
     form {

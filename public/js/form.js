@@ -4,6 +4,8 @@ import { uploadToDataverse } from './apicalls/uploadToDataverse.js';
 import { checkRecordDataverse } from './apicalls/checkRecordDataverse.js';
 
 document.addEventListener("DOMContentLoaded", function () {
+    var formSubmitted = false
+
     document.querySelector("form").addEventListener("submit", async function (event) {
         event.preventDefault(); 
 
@@ -19,23 +21,31 @@ document.addEventListener("DOMContentLoaded", function () {
         const destination = document.getElementById("destination").value;
         const apiKey = document.getElementById("apiKey").value;
 
+        const alertBox = document.getElementById("error-message");
+
+        formSubmitted = true
+
         if (!source || !destination) {
-            alert("Please select both source and destination.");
+            alertBox.style.display = "block";
+            alertBox.innerHTML = "Please select both source and destination."
             return;
         }
 
         if (sourceDataType === "projectId" && !healID) {
-            alert("Please enter a Heal Project ID.");
+            alertBox.style.display = "block";
+            alertBox.innerHTML = "Please enter a Heal Project ID."
             return;
         }
 
         if (sourceDataType === "jsonFile" && !jsonFile) {
-            alert("Please upload study metadata json file.");
+            alertBox.style.display = "block";
+            alertBox.innerHTML = "Please upload study metadata json file."
             return;
         }
 
         if (destination === "dataverse-qdr" && !apiKey) {
-            alert("Please enter an API Key.");
+            alertBox.style.display = "block";
+            alertBox.innerHTML = "Please enter an API Key."
             return;
         }
 
@@ -57,6 +67,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             if(duplicateCheck.datasetExists){
                 message = `⚠️ Record with same dataset title already exists. You can access it here: <a href="https://data.stage.qdr.org/dataset.xhtml?persistentId=${duplicateCheck.persistentId}" target="_blank">${duplicateCheck.persistentId}</a>`
+                formSubmitted = false
             }else{
                 const convertToDataverse = await healToDataverse(healData);
                 message = await uploadToDataverse(convertToDataverse, apiKey); 
@@ -73,6 +84,7 @@ document.addEventListener("DOMContentLoaded", function () {
             apiResponseContainer.innerHTML = `<p class="text-danger">❌ ${error.message}</p>`;
         }finally{
             overlay.style.display = "none";
+            formSubmitted = false
         }
 
         // fetch("/push/qdr", {
@@ -128,5 +140,54 @@ document.addEventListener("DOMContentLoaded", function () {
         // .finally(() => {
         //     overlay.style.display = "none";
         // });
+    });
+
+    document.querySelector("form").addEventListener('change', function() {
+
+        if(formSubmitted){
+            const source = document.getElementById("source").value;
+            const sourceDataType = document.getElementById("dataType").value;
+            
+            //Heal source type can be either project id or uploading json file
+            const healID = document.getElementById("healId").value;
+            const jsonFile = document.getElementById("jsonFile").files[0];
+        
+            const destination = document.getElementById("destination").value;
+            const apiKey = document.getElementById("apiKey").value;
+        
+            const alertBox = document.getElementById("error-message");
+        
+            if (!source || !destination) {
+                alertBox.style.display = "block";
+                alertBox.innerHTML = "Please select both source and destination."
+                return;
+            }
+        
+            if(!sourceDataType){
+                alertBox.style.display = "block";
+                alertBox.innerHTML = "Please select a source data type."
+                return;
+            }
+        
+            if (sourceDataType === "projectId" && !healID) {
+                alertBox.style.display = "block";
+                alertBox.innerHTML = "Please enter a Heal Project ID."
+                return;
+            }
+        
+            if (sourceDataType === "jsonFile" && !jsonFile) {
+                alertBox.style.display = "block";
+                alertBox.innerHTML = "Please upload study metadata json file."
+                return;
+            }
+        
+            if (destination === "dataverse-qdr" && !apiKey) {
+                alertBox.style.display = "block";
+                alertBox.innerHTML = "Please enter an API Key."
+                return;
+            }
+        
+            alertBox.style.display = "none"
+        }
     });
 });
