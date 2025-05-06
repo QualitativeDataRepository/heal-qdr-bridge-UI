@@ -37,10 +37,10 @@ The server should now be accessible on [localhost:8888](http://127.0.0.1:8888/)
 ├── public - Assets and styles
 │   ├── assets
 │   ├── config
-│   ├── customfont
 │   ├── js
 │       └── apicalls
 │   └── styles
+        └── customfont
 └── heal-schema-latest.json
 └── index.html - User Interface
 
@@ -65,6 +65,11 @@ Destination - Dataverse and prompt to supply user's account API Key
 2. **Main Dataverse Environment**:  
    For production use, please generate an API token from the [QDR Main site](https://qdr.syr.edu/).
 
+
+### Config
+
+Base URL's for Heal and QDR are fetched based on the environment.
+js > config.js checks for environment based on the hostname of the site and based on that we call the object from dev.js or prod.js
 
 Refer Obtaining Your QDR API Token section from [docs](https://qdr.syr.edu/ati/anno-rep/logging-anno-rep-detailed-instructions)
 
