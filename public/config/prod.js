@@ -1,5 +1,5 @@
 const prodConfig = {
-    "DATAVERSE_BASE_URL": "https://data.stage.qdr.org/",
+    "DATAVERSE_BASE_URL": "https://qdr.syr.edu/",
     "HEAL_BASE_URL" : "https://healdata.org/"
 }
 
